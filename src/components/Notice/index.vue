@@ -1,5 +1,5 @@
 <template>
-  <div>公告页-（刘璐）</div>
+  <div>公告页-（刘璐）热热防尘盖</div>
 </template>
 <script>
   export default {}
