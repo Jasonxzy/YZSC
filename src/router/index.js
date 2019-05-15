@@ -11,8 +11,7 @@ export default new Router({
       components: {
         index: Home
       }
-    },
-    {
+    }, {
       path: '/purchase',
       components: {
         index: purchase
