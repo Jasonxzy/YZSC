@@ -1,5 +1,5 @@
 <template>
-  <div>顶部导航--666</div>
+  <div>顶部导航--6666</div>
 </template>
 <script>
 export default {}
