@@ -15,7 +15,7 @@ a {
 // 左、右浮动   清除浮动
 .float-l{float: left; }
 .float-r{float: right; }
-.clear{clear: both}
+.clear{display: block;height: 0; line-height: 0;overflow: hidden;clear: both;font-size: 0;}
 
 // 字体颜色样式
 .white{color: white}
@@ -63,3 +63,26 @@ a {
 .magin-L-15{magin-left:15px}
 .magin-L-20{magin-left:20px}
 .magin-L-25{magin-left:25px}
+
+//
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+input, select, button {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  font-family: inherit;
+  vertical-align: middle;
+}
+button {
+  cursor: pointer;
+}
+
+//body 样式
+body{
+  font-size: 12px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
