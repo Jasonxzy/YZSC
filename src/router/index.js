@@ -4,7 +4,7 @@ import Home from '@/components/home/index.vue'
 import login from '@/components/sign/index.vue'
 import Member from '@/components/Member/index.vue'
 import purchase from '@/components/purchase/index.vue'
-import Notice from '@/components/Notice/index.vue'
+import BrandStory from '@/components/BrandStory/index.vue'
 import TopNavigation from '@/components/public/TopNavigation.vue' // 顶部
 import TopBanner from '@/components/public/TopBanner.vue' // 顶部导航
 import search from '@/components/public/search.vue' // 搜索
@@ -68,10 +68,10 @@ export default new Router({
       }
     },
     {
-      path: '/Notice',
+      path: '/BrandStory',
       components: {
-        default: Notice,
-        Notice: Notice
+        default: BrandStory,
+        BrandStory: BrandStory
       }
     }
   ]
