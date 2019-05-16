@@ -71,7 +71,7 @@ export default new Router({
       path: '/Notice',
       components: {
         default: Notice,
-        ClassNav: Notice
+        Notice: Notice
       }
     }
   ]
