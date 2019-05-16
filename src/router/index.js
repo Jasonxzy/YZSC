@@ -32,7 +32,12 @@ export default new Router({
         default: Member,
         Member: Member
       }
+<<<<<<< HEAD
     }, {
+=======
+    }, 
+    {
+>>>>>>> 5aaa00d30430de34e59f715a578cf3571c7edf53
       path: '/purchase',
       components: {
         default: purchase,
@@ -65,12 +70,15 @@ export default new Router({
       components: {
         default: ClassNav,
         ClassNav: ClassNav
+<<<<<<< HEAD
       }
     },
     {
       path: '/Notice',
       components: {
         index: Notice
+=======
+>>>>>>> 5aaa00d30430de34e59f715a578cf3571c7edf53
       }
     }
   ]
