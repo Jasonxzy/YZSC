@@ -19,6 +19,16 @@
               <div class=""> 中间图片 </div>
               <div class=""> 右移动> </div>
             </div>
+    <div class="Shopshow float-l">
+      <div class="Product">
+        <div class="productleft float-l">
+          <div class="shopimg">
+            <img src="" />放图片的
+          </div>
+          <div class="carousel">
+            <div class=""> < 左移动 </div>
+            <div class=""> 中间图片 </div>
+            <div class=""> 右移动> </div>
           </div>
           <div class="productright float-r">商品信息文字</div>
         </div>
