@@ -1,5 +1,5 @@
 <template>
-  <!--公告-刘璐-->
+  <!--品牌故事-刘璐-->
   <div class="allcolor brand">
      <div class="brand-head">
        <a href="#" class="gray fonts-14">主页</a>
