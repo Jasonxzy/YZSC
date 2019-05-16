@@ -7,7 +7,7 @@
             <img src="" />放图片的
           </div>
           <div class="carousel">
-            <div class=""> <左移动 </div>
+            <div class=""> < 左移动 </div>
             <div class=""> 中间图片 </div>
             <div class=""> 右移动> </div>
           </div>
