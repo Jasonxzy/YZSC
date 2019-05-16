@@ -1,16 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/home/index.vue'
-<<<<<<< HEAD
 import login from '@/components/sign/index.vue'
 import Member from '@/components/Member/index.vue'
-=======
 import purchase from '@/components/purchase/index.vue'
 import TopNavigation from '@/components/public/TopNavigation.vue' // 顶部
 import TopBanner from '@/components/public/TopBanner.vue' // 顶部导航
 import search from '@/components/public/search.vue' // 搜索
 import ClassNav from '@/components/public/ClassNav.vue' // banner导航
->>>>>>> daec8f60372725a2ea1f58713b7a926d684e801f
 Vue.use(Router)
 
 export default new Router({
@@ -21,7 +18,6 @@ export default new Router({
         default: Home,
         Home: Home
       }
-<<<<<<< HEAD
     },
     {
       path: '/login',
@@ -35,8 +31,9 @@ export default new Router({
       components: {
         default: Member,
         Member: Member
-=======
-    }, {
+      }
+    }, 
+    {
       path: '/purchase',
       components: {
         default: purchase,
@@ -69,7 +66,6 @@ export default new Router({
       components: {
         default: ClassNav,
         ClassNav: ClassNav
->>>>>>> daec8f60372725a2ea1f58713b7a926d684e801f
       }
     }
   ]
