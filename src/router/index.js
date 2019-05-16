@@ -6,6 +6,7 @@ import TopNavigation from '@/components/public/TopNavigation.vue' // 顶部
 import TopBanner from '@/components/public/TopBanner.vue' // 顶部导航
 import search from '@/components/public/search.vue' // 搜索
 import ClassNav from '@/components/public/ClassNav.vue' // banner导航
+import BottomNav from '@/components/public/BottomNavigation.vue' // 公共底部
 Vue.use(Router)
 
 export default new Router({
@@ -49,6 +50,13 @@ export default new Router({
       components: {
         default: ClassNav,
         ClassNav: ClassNav
+      }
+    },
+    {
+      path: '/BottomNav',
+      components: {
+        default: BottomNav,
+        BottomNav: BottomNav
       }
     }
   ]
