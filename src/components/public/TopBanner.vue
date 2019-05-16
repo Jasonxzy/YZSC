@@ -7,6 +7,7 @@
       </el-carousel-item>
     </el-carousel>
   </div>
+  <!--顶部轮播完成-->
 </template>
 <script>
   import topBanner1 from './img/-333333333333333333333.jpg'
