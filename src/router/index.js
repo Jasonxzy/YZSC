@@ -10,21 +10,21 @@ export default new Router({
     {
       path: '/',
       components: {
-        default:Home,
+        default: Home,
         Home: Home
       }
     },
     {
       path: '/login',
       components: {
-        default:login,
+        default: login,
         login: login
       }
     },
     {
       path: '/Member',
       components: {
-        default:Member,
+        default: Member,
         Member: Member
       }
     }
