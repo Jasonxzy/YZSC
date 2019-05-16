@@ -4,11 +4,12 @@ import Home from '@/components/home/index.vue'
 import login from '@/components/sign/index.vue'
 import Member from '@/components/Member/index.vue'
 import purchase from '@/components/purchase/index.vue'
-import BrandStory from '@/components/BrandStory/index.vue'
+import BrandStory from '@/components/BrandStory/index.vue'// 品牌故事
 import TopNavigation from '@/components/public/TopNavigation.vue' // 顶部
 import TopBanner from '@/components/public/TopBanner.vue' // 顶部导航
 import search from '@/components/public/search.vue' // 搜索
 import ClassNav from '@/components/public/ClassNav.vue' // banner导航
+import Notice from '@/components/Notice/index.vue'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -72,6 +73,13 @@ export default new Router({
       components: {
         default: BrandStory,
         BrandStory: BrandStory
+      }
+    },
+    {
+      path: '/Notice',
+      components: {
+        default: Notice,
+        Notice: Notice
       }
     }
   ]
