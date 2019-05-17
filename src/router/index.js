@@ -4,6 +4,7 @@ import Home from '@/components/home/index.vue'
 import login from '@/components/sign/index.vue'
 import Member from '@/components/Member/index.vue'
 import purchase from '@/components/purchase/index.vue'
+import ShoppingCart from '@/components/ShoppingCart/index.vue'
 import BrandStory from '@/components/BrandStory/index.vue'
 import TopNavigation from '@/components/public/TopNavigation.vue' // 顶部
 import TopBanner from '@/components/public/TopBanner.vue' // 顶部导航
@@ -39,8 +40,13 @@ export default new Router({
         default: purchase,
         purchase: purchase
       }
-    },
-    {
+    }, {
+      path: '/ShoppingCart',
+      components: {
+        default: ShoppingCart,
+        ShoppingCart: ShoppingCart
+      }
+    }, {
       path: '/TopNavigation',
       components: {
         default: TopNavigation,

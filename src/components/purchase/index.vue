@@ -47,9 +47,9 @@
               <div class="fonts-14 float-l">选择规格: </div>
               <div class="fonts-12 float-l choose">
                 <ul >
-                  <li><a href="#">芒果味</a></li>
-                  <li><a href="#">蓝莓味</a></li>
-                  <li><a href="#">草莓味</a></li>
+                  <li class="liMenu"
+                      :class="idx==index?'hover':''" @click="son(item,idx)" v-for="(item,idx) in menu"
+                      :key="idx"><a href="#">{{item}}</a></li>
                 </ul>
               </div>
             </div>
@@ -87,24 +87,63 @@
           </div>
         </div>
         <!--大图展示-->
-        <div class="ProductShow" id="app">
-          <ul class="productshow-tab gray">
-            <li ><a href="#">商品介绍</a> </li>
-            <li ><a href="#">商品评价</a></li>
-            <!--<li @click="cur=0" :class="{active:cur==0}"><a href="#">商品介绍</a> </li>-->
-            <!--<li @click="cur=1" :class="{active:cur==1}"><a href="#">商品评价</a></li>-->
-          </ul>
-          <div  class="productshow-tabbody">
-            <div class="productshow-tabbody-content">
-              <span>保冷包新旧交替中，随机出货，商品以实物为主</span>
-              <img src="http://pic.ganso.com.cn/description/100000770_1.jpg">
-              <img src="http://pic.ganso.com.cn/description/100000770_2.jpg">
-              <img src="http://pic.ganso.com.cn/description/100000770_3.jpg">
-              <img src="http://pic.ganso.com.cn/description/100000770_4.jpg">
-              <img src="http://pic.ganso.com.cn/description/100000770_5.jpg">
+        <div class="Products">
+        <el-tabs v-model="activeName" @tab-click="handleClick" >
+          <el-tab-pane label="商品介绍" name="first">
+            <div class="ProductShow">
+              <div  class="productshow-tabbody">
+                <div class="productshow-tabbody-content">
+                  <span>保冷包新旧交替中，随机出货，商品以实物为主</span>
+                  <img src="http://pic.ganso.com.cn/description/100000770_1.jpg">
+                  <img src="http://pic.ganso.com.cn/description/100000770_2.jpg">
+                  <img src="http://pic.ganso.com.cn/description/100000770_3.jpg">
+                  <img src="http://pic.ganso.com.cn/description/100000770_4.jpg">
+                  <img src="http://pic.ganso.com.cn/description/100000770_5.jpg">
+                  <img src="http://pic.ganso.com.cn/description/100000770_6.jpg">
+                </div>
+              </div>
             </div>
-          </div>
-          <!--<div v-show="cur==1">sdfsdf</div>-->
+          </el-tab-pane>
+          <el-tab-pane label="商品评价" name="second">
+            <div class="ProductShow2">
+              <div  class="productshow-tabbody2">
+                <div class="productshow-tabbody-content2" style="display: none">
+                  <div class="borderbottom">
+                    <i class="header-icon el-icon-caret-right lightgray fontw fonts-12">
+                      <router-link to="/login">欢迎您第一个发表评论</router-link>
+                    </i>
+                    <div class="float-r">0/0评论</div>
+                  </div>
+
+                </div>
+
+                <div class="productshow-tabbody-content2">
+                  <div class="content2-title fonts-12 fontw">发表评论</div>
+                  <div class="content2-published fonts-12 lightgrey">
+                    <div class="float-l">请输入您的评论</div>
+                    <div class="float-r">标有星号 (*) 的字段是必填字段</div>
+                  </div>
+                  <div class="content2-describe fonts-14">评论描述*</div>
+                  <input type="text" class="comments"/>
+                  <div class="content2-score">
+                    <div class="block">
+                      <span class="demonstration">您的评分 *:</span>
+                      <el-rate v-model="value1"></el-rate>
+                    </div>
+                  </div>
+                  <div class="content2-submit">
+                    <button>提交评论</button>
+                  </div>
+                  <div class="content2-return">
+                    <i class="header-icon el-icon-caret-right lightgray fontw fonts-12">
+                      <router-link to="/login">返回评论</router-link>
+                    </i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </el-tab-pane>
+        </el-tabs>
         </div>
       </div>
       <!--内容右边的猜你喜欢-->
@@ -114,32 +153,32 @@
           <li>
             <a href="#"><img src="http://pic.ganso.com.cn/images1/100000027/100000027_M.jpg" /> </a>
             <div class="love-money fontw fonts-12 red2">￥258.00</div>
-            <div class="love-name">甜蜜如心鲜奶蛋糕</div>
+            <div class="love-name gray">甜蜜如心鲜奶蛋糕</div>
           </li>
           <li>
             <a href="#"><img src="http://pic.ganso.com.cn/images1/100001236/100001236_M.jpg" /> </a>
             <div class="love-money fontw fonts-12 red2">￥258.00</div>
-            <div class="love-name">甜蜜如心鲜奶蛋糕</div>
+            <div class="love-name gray">甜蜜如心鲜奶蛋糕</div>
           </li>
           <li>
             <a href="#"><img src="http://pic.ganso.com.cn/images1/100000027/100000027_M.jpg" /> </a>
             <div class="love-money fontw fonts-12 red2">￥258.00</div>
-            <div class="love-name">甜蜜如心鲜奶蛋糕</div>
-          </li>
-          <li>
-            <a href="#"><img src="http://pic.ganso.com.cn/images1/100001236/100001236_M.jpg" /> </a>
-            <div class="love-money fontw fonts-12 red2">￥258.00</div>
-            <div class="love-name">甜蜜如心鲜奶蛋糕</div>
+            <div class="love-name gray">甜蜜如心鲜奶蛋糕</div>
           </li>
           <li>
             <a href="#"><img src="http://pic.ganso.com.cn/images1/100000027/100000027_M.jpg" /> </a>
             <div class="love-money fontw fonts-12 red2">￥258.00</div>
-            <div class="love-name">甜蜜如心鲜奶蛋糕</div>
+            <div class="love-name gray">甜蜜如心鲜奶蛋糕</div>
           </li>
           <li>
             <a href="#"><img src="http://pic.ganso.com.cn/images1/100001236/100001236_M.jpg" /> </a>
             <div class="love-money fontw fonts-12 red2">￥258.00</div>
-            <div class="love-name">甜蜜如心鲜奶蛋糕</div>
+            <div class="love-name gray">甜蜜如心鲜奶蛋糕</div>
+          </li>
+          <li>
+            <a href="#"><img src="http://pic.ganso.com.cn/images1/100000027/100000027_M.jpg" /> </a>
+            <div class="love-money fontw fonts-12 red2">￥258.00</div>
+            <div class="love-name gray">甜蜜如心鲜奶蛋糕</div>
           </li>
         </ul>
       </div>
@@ -148,15 +187,29 @@
 </template>
 <script>
   export default {
-//    data:{
-//    cur:0
-//   }
-
-
-
+    data () {
+      return {
+        activeName: 'second',
+        value1: null,
+        value2: null,
+        menu:['蓝莓味','草莓味','芒果味'],
+        index:0
+      }
+    },
+    methods: {
+      handleClick (tab, event) {
+        console.log(tab, event)
+      }
+    },
+  methods:{
+    son(item,idx){
+      this.index=idx;
+    }
+  }
   }
 </script>
 <style lang="less"  scoped>
+
   a {
     color: #4F4F4F;
   }
@@ -165,45 +218,50 @@
     height: 45px;
     line-height: 45px;
     margin: 0 auto;
+    a{
+      &:hover{
+        color:#E93D6D;
+      }
+    }
   }
-  .YZ-bottom{
+  .YZ-bottom {
     width: 1199px;
     margin: 0 auto;
-    .Shopshow{
-       width: 991px;
-      .Product{
+    .Shopshow {
+      width: 991px;
+      .Product {
         width: 991px;
         height: 600px;
-        .productleft{
+        .productleft {
           width: 477px;
-          .shopimg{
+          .shopimg {
             width: 450px;
             height: 450px;
-            img{
+            img {
               width: 100%;
               height: 100%;
             }
           }
-          .puchase-carousel{
+          .puchase-carousel {
             width: 477px;
             height: 69px;
-            .puchase-carousel-left{
+            .puchase-carousel-left {
               width: 17px;
               height: 45px;
               margin: 0 10px;
             }
-            .puchase-carousel-content{
+            .puchase-carousel-content {
               width: 420px;
               position: relative;
               overflow: hidden;
               display: inline;
-              ul{
+              ul {
                 float: left;
-                li{
+                li {
                   float: left;
                   width: 84px;
                   display: inline;
-                  img{
+                  img {
                     width: 62px;
                     height: 62px;
                     padding: 1px;
@@ -213,37 +271,37 @@
             }
           }
         }
-        .productright{
+        .productright {
           width: 428px;
           height: 554px;
-          margin-right:40px;
+          margin-right: 40px;
           display: inline;
-          .shop-title{
+          .shop-title {
             height: 25px;
             line-height: 25px;
             font-weight: normal;
           }
-          .shop-name{
+          .shop-name {
             width: 100%;
           }
-          .shop-price{
+          .shop-price {
             width: 100%;
             height: 25px;
             line-height: 25px;
           }
-          .shop-specifications{
+          .shop-specifications {
             width: 100%;
             height: 30px;
             line-height: 25px;
-            .choose{
+            .choose {
               margin-left: 3px;
             }
-            li{
+            li {
               margin-right: 10px;
               margin-bottom: 5px;
               text-align: center;
               float: left;
-              a{
+              a {
                 padding: 3px 15px;
                 height: 21px;
                 line-height: 21px;
@@ -251,48 +309,51 @@
                 border: 1px solid #cccccc;
                 font-size: 12px;
                 box-sizing: content-box;
-                &:hover{
-                  color:#E93D6D;
+                &:hover {
+                  color: #E93D6D;
+                }
+                &:active {
+                  border:1px solid red
                 }
               }
 
             }
           }
-          .shop-number{
+          .shop-number {
             width: 100%;
             height: 35px;
             line-height: 25px;
-            ul li{
+            ul li {
               float: left;
-              border:1px solid #ddd;
+              border: 1px solid #ddd;
               background: #fff;
-              color:#AEAEAE;
+              color: #AEAEAE;
               margin-right: 20px;
               line-height: 38px;
               height: 38px;
-              .shop-number-left{
+              .shop-number-left {
                 width: 45px;
                 height: 36px;
                 text-align: center;
                 position: relative;
-                border-right:1px solid #ddd ;
-                input{
+                border-right: 1px solid #ddd;
+                input {
                   width: 100%;
                   height: 100%;
                   text-align: center;
                   font-size: 14px;
-                  color:#AEAEAE;
+                  color: #AEAEAE;
                   border: 0;
                   outline: 0;
                   display: block;
                 }
               }
-              .shop-number-right{
+              .shop-number-right {
                 cursor: pointer;
-                .add{
+                .add {
                   border-bottom: 1px solid #ddd;
                 }
-                span{
+                span {
                   display: block;
                   width: 15px;
                   height: 50%;
@@ -303,7 +364,7 @@
                 }
               }
             }
-            .buy{
+            .buy {
               margin: 0 14px 0 0;
               width: 110px;
               height: 38px;
@@ -311,11 +372,11 @@
               text-align: center;
               border: 1px solid #d5014b;
               display: inline;
-              &:hover{
+              &:hover {
                 color: black;
               }
             }
-            .join{
+            .join {
               width: 150px;
               height: 38px;
               border: 0;
@@ -324,125 +385,207 @@
               text-align: center;
               background-image: url(http://mall.ganso.com.cn/_ui/hepimages/icon_cart.gif);
               background-repeat: no-repeat;
-              background-size:17px 17px;
+              background-size: 17px 17px;
               background-position: 17px;
-              &:hover{
-                background-color:#FE1B6A;
+              &:hover {
+                background-color: #FE1B6A;
               }
             }
 
-            .shu{
+            .shu {
               letter-spacing: 5px;
             }
           }
-          .shop-service{
+          .shop-service {
             padding: 0 12px;
             line-height: 29px;
             color: #5a5a58;
             background-color: #f7f3e8;
-            img{
+            img {
               border: none;
               vertical-align: middle;
             }
           }
-          .shop-collection{
+          .shop-collection {
             height: 20px;
             line-height: 20px;
-            .Serial-number{
+            .Serial-number {
               float: left;
               margin-right: 30px;
               display: inline;
             }
-            a{
+            a {
               line-height: 20px;
               margin-right: 21px;
               cursor: pointer;
               float: left;
-              &:hover{
-                color:#E93D6D;
+              &:hover {
+                color: #E93D6D;
               }
             }
           }
         }
       }
-      .ProductShow{
-        ul{
-          width: 100%;
+      .Products {
+        // deep 深度查询
+        /deep/ .el-tabs__header {
+          background-color: #999999;
+        }
+        /deep/ .el-tabs__item.is-active {
+          color: white;
+          background-color: #b6ab8f;
+        }
+        /deep/ .el-tabs__nav-wrap::after {
+          height: 0;
+        }
+        /deep/ .el-tabs__active-bar {
+          background-color: inherit;
+        }
+        /deep/ .el-tabs__item {
+          color: white;
+          width: 120px;
+          text-align: center;
+          padding: inherit;
           height: 30px;
-          li{
-            float: left;
-            a{
-              float: left;
-              width: 120px;
-              height: 30px;
-              color: white;
-              line-height: 30px;
-              text-align: center;
-              font-size: 14px;
-              &:hover{
-                background-color: #b6ab8f;
+          line-height: 30px;
+        }
+        .ProductShow {
+          .productshow-tabbody {
+            width: 920px;
+            margin: 0 auto;
+            padding: 10px 0 20px 0;
+            display: block;
+            .productshow-tabbody-content {
+              position: relative;
+              padding: 10px 0 20px 0;
+              text-align: left;
+              span {
+                font-size: medium;
+                font-style: inherit;
+                font-family: inherit;
+                vertical-align: baseline;
+                font-weight: 700;
+              }
+              img {
+                max-width: 920px;
+                /*margin: 0 auto;*/
+                margin-left: 10px;
+                /*消除图片缝隙：*/
+                outline-width: 0px;
+                vertical-align: top;
               }
             }
           }
         }
-        .productshow-tabbody{
-          width: 920px;
-          margin: 0 auto;
-          padding: 10px 0 20px 0;
-          display: block;
-          .productshow-tabbody-content{
-            position: relative;
-            padding: 10px 0 20px 0;
-            text-align: left;
-            span{
-              font-size: medium;
-              font-style: inherit;
-              font-family: inherit;
-              vertical-align: baseline;
-              font-weight: 700;
+        .ProductShow2 {
+          .productshow-tabbody2 {
+            width: 920px;
+            margin: 0 auto;
+            padding: 20px 0 20px 0;
+            display: block;
+
+            .productshow-tabbody2-content2 {
+              position: relative;
+              padding: 10px 0 20px 0;
+              text-align: left;
+              .borderbottom{
+                width: 920px;
+                height: 15px;
+                border-bottom: 1px solid #a5a5a5;
+              }
             }
-            img{
-              max-width: 920px;
-              /*margin: 0 auto;*/
-              margin-left: 10px;
-              /*消除图片缝隙：*/
-              outline-width:0px;
-              vertical-align:top;
+            /*隐藏部分*/
+            .content2-title{
+              width: 100%;
+              height: 39px;
+              line-height: 39px;
+              margin: 0 0 20px 0;
+              border-bottom: 1px solid #a5a5a5;
+            }
+            .content2-published{
+              height: 17px;
+              margin: 0 0 20px 0;
+            }
+            .content2-describe{
+              height: 20px;
+              line-height: 20px;
+              margin: 12px 0 2px 0;
+              font-weight: normal;
+            }
+            .comments{
+              height: 50px;
+              width: 100%;
+              margin: 10px 0 10px 0;
+            }
+            .content2-score{
+              height: 78px;
+              width: 100%;
+              .el-rate{
+                margin-top: 20px;
+                /deep/.el-rate__icon{
+                  font-size: 3px;
+                  margin-left: 30px;
+                }
+              }
+
+            }
+            .content2-submit{
+              height: 42px;
+              margin: 5px 0 20px 0;
+              button{
+                width: 52px;
+                height: 40px;
+                background-color: #E4004F;
+                color: white;
+                line-height: 40px;
+                text-align: center;
+                border: inherit;
+                font-weight: bold;
+              }
+            }
+            .content2-return{
+              height: 30px;
+              line-height: 30px;
+              margin: 20px 0;
+              border-top: 1px solid #a5a5a5;
+              a{
+                color: #808080;
+              }
             }
           }
         }
       }
     }
-    .Maylove{
+    .Maylove {
       width: 190px;
-      .Maylove-nav{
+      .Maylove-nav {
         padding: 0 13px;
         height: 30px;
         line-height: 30px;
         position: relative;
         overflow: hidden;
       }
-      ul{
+      ul {
         width: 170px;
         margin: 0 auto;
-        li{
+        li {
           width: 170px;
           margin-bottom: 10px;
-          .love-money{
+          .love-money {
             height: 27px;
             line-height: 27px;
             text-align: right;
             overflow: hidden;
             display: block;
           }
-          .love-name{
+          .love-name {
             height: 36px;
             line-height: 18px;
             overflow: hidden;
             font-weight: normal;
             display: block;
           }
-          img{
+          img {
             width: 170px;
             height: 170px;
             display: block;
