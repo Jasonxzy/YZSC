@@ -169,6 +169,7 @@
     height: 395px;
     margin: 30px auto;
   }
+  /*点击导航过度效果*/
   .brand-head a:nth-of-type(1):hover,.brand-head a:nth-of-type(2):hover{
     color: red;
     transition: all 0.5s;
