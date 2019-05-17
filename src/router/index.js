@@ -9,89 +9,80 @@ import TopNavigation from '@/components/public/TopNavigation.vue' // 顶部
 import TopBanner from '@/components/public/TopBanner.vue' // 顶部导航
 import search from '@/components/public/search.vue' // 搜索
 import ClassNav from '@/components/public/ClassNav.vue' // banner导航
-<<<<<<< HEAD
-import Notice from '@/components/Notice/index.vue'
-=======
+import Notice from '@/components/Notice/index.vue' // 公告一
 import BottomNav from '@/components/public/BottomNavigation.vue' // 公共底部
->>>>>>> 2807d28d8e84709dabc8e92535c1516f189ae26e
+import HelpCenter from '@/components/HelpCenter/index.vue' // 帮助中心
 Vue.use(Router)
 export default new Router({
   routes: [
     {
       path: '/',
       components: {
-        default: Home,
-        Home: Home
+        default: Home
       }
     },
     {
       path: '/login',
       components: {
-        default: login,
-        login: login
+        default: login
       }
     },
     {
       path: '/Member',
       components: {
-        default: Member,
-        Member: Member
+        default: Member
       }
     }, {
       path: '/purchase',
       components: {
-        default: purchase,
-        purchase: purchase
+        default: purchase
       }
     },
     {
       path: '/TopNavigation',
       components: {
-        default: TopNavigation,
-        TopNavigation: TopNavigation
+        default: TopNavigation
       }
     },
     {
       path: '/TopBanner',
       components: {
-        default: TopBanner,
-        TopBanner: TopBanner
+        default: TopBanner
       }
     },
     {
       path: '/search',
       components: {
-        default: search,
-        TopBanner: search
+        default: search
       }
     },
     {
       path: '/ClassNav',
       components: {
-        default: ClassNav,
-        ClassNav: ClassNav
+        default: ClassNav
       }
     },
     {
       path: '/BottomNav',
       components: {
-        default: BottomNav,
-        BottomNav: BottomNav
+        default: BottomNav
       }
     },
     {
       path: '/BrandStory',
       components: {
-        default: BrandStory,
-        BrandStory: BrandStory
+        default: BrandStory
       }
     },
     {
-      path: '/Notice',
+      path: '/Notice/:id',
       components: {
-        default: Notice,
-        Notice: Notice
+        default: Notice
       }
+    },
+    {
+      path: '/HelpCenter',
+      component: HelpCenter
     }
   ]
 })
