@@ -55,18 +55,18 @@
             </div>
             <div class="shop-number margin-B-25">
               <div class="fonts-14 float-l shu lightgray">数量:</div>
-              <ul><li>
-                <div class="float-l shop-number-left">
-                  <input type="" value="1"/>
-                </div>
-                <div class="float-r shop-number-right">
-                  <span class="add" >+</span>
-                  <span class="less" >-</span>
-                </div>
-              </li></ul>
-              <button class="buy fonts-20 float-l red2 buypinkred">立即购买</button>
-              <button class="join fonts-20 float-l white joinred">加入购物车</button>
+          <ul><li>
+            <div class="float-l shop-number-left">
+              <input type="" value="1"/>
             </div>
+            <div class="float-r shop-number-right">
+              <span class="add" >+</span>
+              <span class="less" >-</span>
+            </div>
+          </li></ul>
+          <button class="buy fonts-20 float-l red2 buypinkred">立即购买</button>
+          <button class="join fonts-20 float-l white joinred">加入购物车</button>
+        </div>
             <div class="shop-service fonts-12 margin-B-20">
               服务承诺：
               <img src="http://mall.ganso.com.cn/_ui/hepimages/00.gif"/>
@@ -150,35 +150,10 @@
       <div class="Maylove float-r allcolor">
         <div class="Maylove-nav white deeppinkred margin-B-10 fonts-14 fontw">猜你喜欢</div>
         <ul>
-          <li>
-            <a href="#"><img src="http://pic.ganso.com.cn/images1/100000027/100000027_M.jpg" /> </a>
-            <div class="love-money fontw fonts-12 red2">￥258.00</div>
-            <div class="love-name gray">甜蜜如心鲜奶蛋糕</div>
-          </li>
-          <li>
-            <a href="#"><img src="http://pic.ganso.com.cn/images1/100001236/100001236_M.jpg" /> </a>
-            <div class="love-money fontw fonts-12 red2">￥258.00</div>
-            <div class="love-name gray">甜蜜如心鲜奶蛋糕</div>
-          </li>
-          <li>
-            <a href="#"><img src="http://pic.ganso.com.cn/images1/100000027/100000027_M.jpg" /> </a>
-            <div class="love-money fontw fonts-12 red2">￥258.00</div>
-            <div class="love-name gray">甜蜜如心鲜奶蛋糕</div>
-          </li>
-          <li>
-            <a href="#"><img src="http://pic.ganso.com.cn/images1/100000027/100000027_M.jpg" /> </a>
-            <div class="love-money fontw fonts-12 red2">￥258.00</div>
-            <div class="love-name gray">甜蜜如心鲜奶蛋糕</div>
-          </li>
-          <li>
-            <a href="#"><img src="http://pic.ganso.com.cn/images1/100001236/100001236_M.jpg" /> </a>
-            <div class="love-money fontw fonts-12 red2">￥258.00</div>
-            <div class="love-name gray">甜蜜如心鲜奶蛋糕</div>
-          </li>
-          <li>
-            <a href="#"><img src="http://pic.ganso.com.cn/images1/100000027/100000027_M.jpg" /> </a>
-            <div class="love-money fontw fonts-12 red2">￥258.00</div>
-            <div class="love-name gray">甜蜜如心鲜奶蛋糕</div>
+          <li v-for="i in list">
+            <a href="#"><img :src="i.img" :alt="i.name"/></a>
+            <div class="love-money fontw fonts-12 red2">￥{{i.monery}}</div>
+            <div class="love-name gray">{{i.name}}</div>
           </li>
         </ul>
       </div>
@@ -186,14 +161,23 @@
   </div>
 </template>
 <script>
+  import img1 from "../public/img/100000027_M.jpg"
+  import img2 from "../public/img/100001236_M.jpg"
+  import img3 from "../public/img/100001239_M.jpg"
   export default {
+    name:"guessLike",
     data () {
       return {
         activeName: 'second',
         value1: null,
         value2: null,
         menu:['蓝莓味','草莓味','芒果味'],
-        index:0
+        index:0,
+        list: [
+          {name:"甜蜜如心鲜奶蛋糕",img:img1,monery:"258.00"},
+          {name:"朵朵咖啡鲜奶蛋糕",img:img2,monery:"268.00"},
+          {name:"8号桃花扇鲜奶蛋糕",img:img3,monery:"278.00"}
+        ]
       }
     },
     methods: {
@@ -201,7 +185,7 @@
         console.log(tab, event)
       }
     },
-  methods:{
+    methods:{
     son(item,idx){
       this.index=idx;
     }
