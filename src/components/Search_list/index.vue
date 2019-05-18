@@ -30,8 +30,16 @@
           <el-menu-item index="3-1">销量（由低到高）</el-menu-item>
           <el-menu-item index="3-2">销量（由高到低）</el-menu-item>
         </el-submenu>
+        <li class="subTotal">
+          <!--共多少个商品-->
+          <strong class="total">每页：100条</strong>
+        </li>
+        <li class="page2">
+          <span class="sl"><span id="Current_page">当前页：<ins>1</ins></span></span>
+        </li>
       </el-menu>
       <div class="line">
+        <!--单件商品-->
         <div class="Products">
           <a href="#" class="photo">
             <img title="芝兰玉叶慕思蛋糕" alt="芝兰玉叶慕思蛋糕" src="./img/100001442_M.jpg" />
@@ -46,6 +54,83 @@
            <strong class="price">¥198.00<span>/6号</span></strong>
           <a href="#" class="btn_minxi">立即购买</a>
         </div>
+        <div class="Products">
+          <a href="#" class="photo">
+            <img title="芝兰玉叶慕思蛋糕" alt="芝兰玉叶慕思蛋糕" src="./img/100001442_M.jpg" />
+          </a>
+          <div class="ms">
+            <h5>
+              <a href="#"> 芝兰玉叶慕思蛋糕</a>
+            </h5>
+            <P>干酪慕思，布朗尼饼干底</P>
+            <P class="spec">规格：6号、8号</P>
+          </div>
+          <strong class="price">¥198.00<span>/6号</span></strong>
+          <a href="#" class="btn_minxi">立即购买</a>
+        </div>
+        <div class="Products">
+          <a href="#" class="photo">
+            <img title="芝兰玉叶慕思蛋糕" alt="芝兰玉叶慕思蛋糕" src="./img/100001442_M.jpg" />
+          </a>
+          <div class="ms">
+            <h5>
+              <a href="#"> 芝兰玉叶慕思蛋糕</a>
+            </h5>
+            <P>干酪慕思，布朗尼饼干底</P>
+            <P class="spec">规格：6号、8号</P>
+          </div>
+          <strong class="price">¥198.00<span>/6号</span></strong>
+          <a href="#" class="btn_minxi">立即购买</a>
+        </div>
+        <div class="Products">
+          <a href="#" class="photo">
+            <img title="芝兰玉叶慕思蛋糕" alt="芝兰玉叶慕思蛋糕" src="./img/100001442_M.jpg" />
+          </a>
+          <div class="ms">
+            <h5>
+              <a href="#"> 芝兰玉叶慕思蛋糕</a>
+            </h5>
+            <P>干酪慕思，布朗尼饼干底</P>
+            <P class="spec">规格：6号、8号</P>
+          </div>
+          <strong class="price">¥198.00<span>/6号</span></strong>
+          <a href="#" class="btn_minxi">立即购买</a>
+        </div>
+        <!--商品分页-->
+        <div class="block">
+          <el-pagination
+            @size-change="handleSizeChange"
+            @current-change="handleCurrentChange"
+            :current-page="currentPage1"
+            :page-sizes="[100, 200, 300, 400]"
+            :page-size="100"
+            layout="total, sizes, prev, pager, next, jumper"
+            :total="400">
+          </el-pagination>
+        </div>
+        <!--商品分页结束-->
+      </div>
+    </div>
+    <!--猜你喜欢-->
+    <div id="sidebar">
+      <div class="yCmsContentSlot">
+        <h4 class="redTitle">猜你喜欢</h4>
+        <ul class="likeProductList">
+          <li>
+            <a href="#">
+              <img src="./img/100000027_M.jpg" alt="甜蜜如心鲜奶蛋糕"/>
+            </a>
+            <em>¥258.00</em>
+            <strong> 甜蜜如心鲜奶蛋糕</strong>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./img/100000027_M.jpg" alt="甜蜜如心鲜奶蛋糕"/>
+            </a>
+            <em>¥258.00</em>
+            <strong> 甜蜜如心鲜奶蛋糕</strong>
+          </li>
+        </ul>
       </div>
     </div>
     <span class="clear"></span>
@@ -68,20 +153,35 @@ export default {
     ClassNav,
     BottomNav
   },
-   data () {
-     return {
-       imglist: [banner1, banner2, banner3],
-       activeIndex: '1'
-     }
-   },
+  data () {
+    return {
+      imglist: [banner1, banner2, banner3],
+      activeIndex: '1',
+      currentPage1: 1
+    }
+  },
   methods: {
     handleSelect (key, keyPath) {
       console.log(key, keyPath)
+    },
+    handleSizeChange (val) {
+      console.log(`每页 ${val} 条`)
+      let total = document.querySelector('.total')
+      total.innerHTML = `每页：${val} 条`
+    },
+    handleCurrentChange(val) {
+      console.log(`当前页: ${val}`)
+        let curpa = document.querySelector('#Current_page')
+        curpa.innerHTML = `当前页：${val}`
     }
   }
 }
 </script>
 <style>
+  body {
+    background: #fff;
+    background-color: #f9f9f9;
+  }
   #container{
     width: 1200px;
     margin: 0 auto;
@@ -197,5 +297,139 @@ export default {
   }
   .Products .btn_minxi:hover {
     background-color: #fe0259;
+  }
+  .line{
+    float: left;
+    width: 990px;
+  }
+  #sidebar {
+    float: right;
+    width: 195px;
+    background-color: #ffffff;
+  }
+  .redTitle {
+    padding: 0 13px;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    margin-bottom: 10px;
+    background-color: #e50150;
+  }
+  h3, h4 {
+    font-size: 14px;
+  }
+  .likeProductList {
+    width: 170px;
+    margin: 0 auto;
+  }
+  .likeProductList li {
+    width: 170px;
+    margin-bottom: 10px;
+  }
+  .likeProductList li a {
+    color: #5c5c5c;
+  }
+  .likeProductList li a img {
+    width: 170px;
+    height: 170px;
+    display: block;
+  }
+  .likeProductList li em {
+    height: 27px;
+    line-height: 27px;
+    text-align: right;
+    overflow: hidden;
+    font-weight: bold;
+    color: #e70050;
+    display: block;
+  }
+  .likeProductList li strong {
+    height: 36px;
+    line-height: 18px;
+    overflow: hidden;
+    font-weight: normal;
+    display: block;
+  }
+  .Products:hover{
+    z-index: 999;
+    background-color: #fcfcfc;
+  }
+  .el-menu.el-menu--horizontal{
+    background-color: #f5f5f5;
+  }
+  .el-menu--horizontal>.el-menu-item:not(.is-disabled):focus, .el-menu--horizontal>.el-menu-item:not(.is-disabled):hover, .el-menu--horizontal>.el-submenu .el-submenu__title:hover{
+    background-color: #f5f5f5;
+  }
+  .subTotal {
+    float: left;
+    font-size: 15px;
+    height: 35px;
+    line-height: 35px;
+    margin-left: 400px;
+    color: #4f4f4f;
+  }
+  b, strong {
+    font-weight: 700;
+  }
+  .subTotal em {
+    color: #e70050;
+  }
+  .page2 {
+    float: right;
+    position: relative;
+    font-size: 14px;
+    padding-top: 8px;
+  }
+  .page2 span {
+    float: left;
+    width: 88px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    font-size: 12px;
+  }
+  .page2 span ins {
+    color: #e93d6d;
+    text-decoration: none;
+  }
+  .line .block{
+    text-align: center;
+    margin: 35px 0;
+  }
+  .el-pager li{
+    margin: 0 5px;
+  }
+  .el-pager li.active{
+    color: #fff;
+    background-color: #e50150;
+  }
+  .el-pager li:hover{
+    color: #fff;
+    background-color: #e50150;
+  }
+  .el-pagination button:hover {
+    color: #fff;
+    background-color: #e50150;
+  }
+  .el-pagination button:disabled {
+    display: none;
+  }
+  .el-pagination__sizes .el-input .el-input__inner:hover {
+    border-color: #e50150;
+  }
+  .el-input__inner:hover {
+    border-color: #e50150;
+  }
+  .el-input.is-active .el-input__inner, .el-input__inner:focus {
+    border-color: #e50150;
+    outline: 0;
+  }
+  .el-select .el-input__inner:focus {
+    border-color: #e50150;
+  }
+  .el-select-dropdown__item.selected {
+    color: #e50150;
   }
 </style>

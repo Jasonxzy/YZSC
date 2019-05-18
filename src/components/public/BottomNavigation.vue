@@ -186,4 +186,13 @@ export default {
   #btn_sc:hover em{
     right: 36px;
   }
+  #btn_backtop:hover{
+    background-color: #e4004f;
+  }
+  #btn_hd:hover{
+    background-color: #E4004F;
+  }
+  #btn_sc:hover{
+    background-color: #E4004F;
+  }
 </style>
