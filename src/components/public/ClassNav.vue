@@ -91,7 +91,6 @@
     height: 40px;
     min-width: 1200px;
     margin: 0 auto;
-    z-index: 50000;
     position: relative;
     background-color: #ffffff;
     border-bottom: 2px solid #e4004f;
@@ -135,7 +134,7 @@
     position: absolute;
     top: 0px;
     left: -2px;
-    z-index: 50000;
+    z-index: 999;
   }
   .submenu .menutitle{
     overflow: hidden;
