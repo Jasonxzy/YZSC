@@ -47,7 +47,8 @@ export default new Router({
         default: ShoppingCart,
         ShoppingCart: ShoppingCart
       }
-    }, {
+    },
+    {
       path: '/TopNavigation',
       components: {
         default: TopNavigation,
