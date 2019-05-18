@@ -11,6 +11,7 @@ import search from '@/components/public/search.vue' // 搜索
 import ClassNav from '@/components/public/ClassNav.vue' // banner导航
 import Notice from '@/components/Notice/index.vue'
 import BottomNav from '@/components/public/BottomNavigation.vue' // 公共底部
+import SearchList from '@/components/Search_list/index.vue' // 公共底部
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -88,6 +89,12 @@ export default new Router({
       components: {
         default: Notice,
         Notice: Notice
+      }
+    },
+    {
+      path: '/SearchList',
+      components: {
+        default: SearchList
       }
     }
   ]
