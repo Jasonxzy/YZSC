@@ -19,11 +19,11 @@
     <!--轮播结束-->
     <div id="Sequence">
       <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
-        <el-menu-item index="1">综合排序</el-menu-item>
+        <el-menu-item index="1" @click="comp">综合排序</el-menu-item>
         <el-submenu index="2">
           <template slot="title">价格</template>
-          <el-menu-item index="2-1">价格（由低到高）</el-menu-item>
-          <el-menu-item index="2-2">价格（由高到低）</el-menu-item>
+          <el-menu-item index="2-1" @click="Low_to_high">价格（由低到高）</el-menu-item>
+          <el-menu-item index="2-2" @click="high_to_Low">价格（由高到低）</el-menu-item>
         </el-submenu>
         <el-submenu index="3">
           <template slot="title">销量</template>
@@ -40,60 +40,60 @@
       </el-menu>
       <div class="line">
         <!--单件商品-->
-        <div class="Products">
+        <div class="Products" id="1">
           <a href="#" class="photo">
-            <img title="芝兰玉叶慕思蛋糕" alt="芝兰玉叶慕思蛋糕" src="./img/100001442_M.jpg" />
+            <img title="芝兰玉叶慕思蛋糕" alt="芝兰玉叶慕思蛋糕" src="./img/100000027_M.jpg" />
           </a>
           <div class="ms">
             <h5>
-              <a href="#"> 芝兰玉叶慕思蛋糕</a>
+              <a href="#"> 芝兰玉叶慕思蛋糕35</a>
             </h5>
             <P>干酪慕思，布朗尼饼干底</P>
-            <P class="spec">规格：6号、8号</P>
+            <P class="spec">规格：78号、56号</P>
           </div>
-           <strong class="price">¥198.00<span>/6号</span></strong>
+           <strong class="price">￥145.00</strong>
           <a href="#" class="btn_minxi">立即购买</a>
         </div>
-        <div class="Products">
+        <div class="Products" id="2">
           <a href="#" class="photo">
-            <img title="芝兰玉叶慕思蛋糕" alt="芝兰玉叶慕思蛋糕" src="./img/100001442_M.jpg" />
+            <img title="芝兰玉叶慕思蛋糕" alt="芝兰玉叶慕思蛋糕" src="./img/100000027_M.jpg" />
           </a>
           <div class="ms">
             <h5>
-              <a href="#"> 芝兰玉叶慕思蛋糕</a>
+              <a href="#"> 芝兰玉叶慕思蛋糕54</a>
             </h5>
-            <P>干酪慕思，布朗尼饼干底</P>
-            <P class="spec">规格：6号、8号</P>
+            <P>干酪慕思，布朗尼饼干底678</P>
+            <P class="spec">规格：54号、65号</P>
           </div>
-          <strong class="price">¥198.00<span>/6号</span></strong>
+          <strong class="price">￥132.00</strong>
           <a href="#" class="btn_minxi">立即购买</a>
         </div>
-        <div class="Products">
+        <div class="Products" id="3">
           <a href="#" class="photo">
             <img title="芝兰玉叶慕思蛋糕" alt="芝兰玉叶慕思蛋糕" src="./img/100001442_M.jpg" />
           </a>
           <div class="ms">
             <h5>
-              <a href="#"> 芝兰玉叶慕思蛋糕</a>
+              <a href="#"> 芝兰玉叶慕思蛋糕545</a>
             </h5>
-            <P>干酪慕思，布朗尼饼干底</P>
-            <P class="spec">规格：6号、8号</P>
+            <P>干酪慕思，布朗尼饼干底88</P>
+            <P class="spec">规格：585号、552号</P>
           </div>
-          <strong class="price">¥198.00<span>/6号</span></strong>
+          <strong class="price">￥173.00</strong>
           <a href="#" class="btn_minxi">立即购买</a>
         </div>
-        <div class="Products">
+        <div class="Products" id="4">
           <a href="#" class="photo">
             <img title="芝兰玉叶慕思蛋糕" alt="芝兰玉叶慕思蛋糕" src="./img/100001442_M.jpg" />
           </a>
           <div class="ms">
             <h5>
-              <a href="#"> 芝兰玉叶慕思蛋糕</a>
+              <a href="#"> 芝兰玉叶慕思蛋糕75</a>
             </h5>
             <P>干酪慕思，布朗尼饼干底</P>
-            <P class="spec">规格：6号、8号</P>
+            <P class="spec">规格：45号、55号</P>
           </div>
-          <strong class="price">¥198.00<span>/6号</span></strong>
+          <strong class="price">￥125.00</strong>
           <a href="#" class="btn_minxi">立即购买</a>
         </div>
         <!--商品分页-->
@@ -162,7 +162,6 @@ export default {
   },
   methods: {
     handleSelect (key, keyPath) {
-      console.log(key, keyPath)
     },
     handleSizeChange (val) {
       console.log(`每页 ${val} 条`)
@@ -171,8 +170,67 @@ export default {
     },
     handleCurrentChange(val) {
       console.log(`当前页: ${val}`)
-        let curpa = document.querySelector('#Current_page')
-        curpa.innerHTML = `当前页：${val}`
+      let curpa = document.querySelector('#Current_page')
+      curpa.innerHTML = `当前页：${val}`
+    },
+    //    价格：由低到高
+    Low_to_high:function () {
+      let All_price = document.querySelectorAll('.price')
+      let com = document.querySelectorAll(".Products")
+      let a = null
+      for(var i = 0; i < All_price.length; i++) {
+        for(var j = 0; j < i; j++) {
+          if (All_price[i].innerHTML < All_price[j].innerHTML) {
+          //   html排序
+            a = com[i].innerHTML
+            com[i].innerHTML = com[j].innerHTML
+            com[j].innerHTML = a
+            //  id排序
+            a = com[i].id
+            com[i].id = com[j].id
+            com[j].id = a
+          }
+        }
+      }
+    },
+    //    价格：由高到低
+    high_to_Low:function () {
+      let All_price = document.querySelectorAll('.price')
+      let com = document.querySelectorAll(".Products")
+      let a = null
+      for(var i = 0; i < All_price.length; i++) {
+        for(var j = 0; j < i; j++) {
+          if (All_price[i].innerHTML > All_price[j].innerHTML) {
+            //   html排序
+            a = com[i].innerHTML
+            com[i].innerHTML = com[j].innerHTML
+            com[j].innerHTML = a
+            //   id排序
+            a = com[i].id
+            com[i].id = com[j].id
+            com[j].id = a
+          }
+        }
+      }
+    },
+    //    综合排序
+    comp:function () {
+      let com = document.querySelectorAll(".Products")
+      let a = null
+      for(var i = 0; i < com.length; i++) {
+        for(var j = 0; j < i; j++) {
+          if (com[i].id < com[j].id) {
+            //   html排序
+            a = com[i].innerHTML
+            com[i].innerHTML = com[j].innerHTML
+            com[j].innerHTML = a
+            //   id排序
+            a = com[i].id
+            com[i].id = com[j].id
+            com[j].id = a
+          }
+        }
+      }
     }
   }
 }
