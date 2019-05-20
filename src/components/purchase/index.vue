@@ -65,7 +65,12 @@
             </div>
           </li></ul>
           <button class="buy fonts-20 float-l red2 buypinkred">立即购买</button>
-          <button class="join fonts-20 float-l white joinred">加入购物车</button>
+              <button class="join fonts-20 float-l white joinred">
+                <el-popover ref="popover2" placement="top-start" title="成功加入购物车" width="200" trigger="click"
+                  content="">
+                </el-popover>
+                <el-button v-popover:popover2>加入购物车</el-button>
+              </button>
         </div>
             <div class="shop-service fonts-12 margin-B-20">
               服务承诺：
@@ -165,18 +170,19 @@
   import img2 from "../public/img/100001236_M.jpg"
   import img3 from "../public/img/100001239_M.jpg"
   export default {
-    name:"guessLike",
+    name: "guessLike",
     data () {
       return {
-        activeName: 'second',
+        dialogVisible: false,
+        activeName: 'first',
         value1: null,
         value2: null,
-        menu:['蓝莓味','草莓味','芒果味'],
-        index:0,
+        menu: ['蓝莓味', '草莓味', '芒果味'],
+        index: 0,
         list: [
-          {name:"甜蜜如心鲜奶蛋糕",img:img1,monery:"258.00"},
-          {name:"朵朵咖啡鲜奶蛋糕",img:img2,monery:"268.00"},
-          {name:"8号桃花扇鲜奶蛋糕",img:img3,monery:"278.00"}
+          {name: "甜蜜如心鲜奶蛋糕", img: img1, monery: "258.00"},
+          {name: "朵朵咖啡鲜奶蛋糕", img: img2, monery: "268.00"},
+          {name: "8号桃花扇鲜奶蛋糕", img: img3, monery: "278.00"}
         ]
       }
     },
@@ -185,11 +191,11 @@
         console.log(tab, event)
       }
     },
-    methods:{
-    son(item,idx){
-      this.index=idx;
+    methods: {
+      son (item, idx) {
+        this.index = idx;
+      }
     }
-  }
   }
 </script>
 <style lang="less"  scoped>
@@ -371,7 +377,20 @@
               background-repeat: no-repeat;
               background-size: 17px 17px;
               background-position: 17px;
+              /deep/.el-button {
+                height: 37px;
+                margin-top: -5px;
+                background-color: #e4004f;
+                font-size: 17px;
+                border: none;
+                color: white;
+                padding: 0;
+              }
+
               &:hover {
+                background-color: #FE1B6A;
+              }
+              &:hover /deep/.el-button{
                 background-color: #FE1B6A;
               }
             }
@@ -416,7 +435,7 @@
           background-color: #999999;
         }
         /deep/ .el-tabs__item.is-active {
-          color: white;
+          color: white!important;
           background-color: #b6ab8f;
         }
         /deep/ .el-tabs__nav-wrap::after {
