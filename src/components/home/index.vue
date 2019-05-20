@@ -25,7 +25,7 @@
         </div>
         <ul class="NewsList">
           <li>
-            <router-link to="/BottomNav" title="【公告】18年中秋月饼销毁">【公告】18年中秋月饼销毁</router-link>
+            <router-link to="/Notice" title="【公告】18年中秋月饼销毁">【公告】18年中秋月饼销毁</router-link>
           </li>
         </ul>
       </div>
@@ -38,37 +38,37 @@
           <div class="Tab_nr">
             <ul class="ProductList3">
               <li>
-                <a href="#" class="photo">
+                <router-link to="/purchase" class="photo">
                   <img title="8号溪云初起巧克力蛋糕" alt="8号溪云初起巧克力蛋糕" src="./img/100001422_M.jpg"/>
-                </a>
+                </router-link>
                 <strong>溪云初起巧克力蛋糕</strong>
                 <em> ¥258.00</em>
               </li>
               <li>
-                <a href="#" class="photo">
+                <router-link to="/purchase" class="photo">
                   <img title="8号溪云初起巧克力蛋糕" alt="8号溪云初起巧克力蛋糕" src="./img/100001422_M.jpg"/>
-                </a>
+                </router-link>
                 <strong>溪云初起巧克力蛋糕</strong>
                 <em> ¥258.00</em>
               </li>
               <li>
-                <a href="#" class="photo">
+                <router-link to="/purchase" class="photo">
                   <img title="8号溪云初起巧克力蛋糕" alt="8号溪云初起巧克力蛋糕" src="./img/100001422_M.jpg"/>
-                </a>
+                </router-link>
                 <strong>溪云初起巧克力蛋糕</strong>
                 <em> ¥258.00</em>
               </li>
               <li>
-                <a href="#" class="photo">
+                <router-link to="/purchase" class="photo">
                   <img title="8号溪云初起巧克力蛋糕" alt="8号溪云初起巧克力蛋糕" src="./img/100001422_M.jpg"/>
-                </a>
+                </router-link>
                 <strong>溪云初起巧克力蛋糕</strong>
                 <em> ¥258.00</em>
               </li>
               <li>
-                <a href="#" class="photo">
+                <router-link to="/purchase" class="photo">
                   <img title="8号溪云初起巧克力蛋糕" alt="8号溪云初起巧克力蛋糕" src="./img/100001422_M.jpg"/>
-                </a>
+                </router-link>
                 <strong>溪云初起巧克力蛋糕</strong>
                 <em> ¥258.00</em>
               </li>
@@ -80,37 +80,37 @@
           <div class="Tab_nr">
             <ul class="ProductList3">
               <li>
-                <a href="#" class="photo">
+                <router-link to="/purchase" class="photo">
                   <img title="8号溪云初起巧克力蛋糕" alt="8号溪云初起巧克力蛋糕" src="./img/100001082_M.jpg"/>
-                </a>
+                </router-link>
                 <strong>溪云初起巧克力蛋糕</strong>
                 <em> ¥258.00</em>
               </li>
               <li>
-                <a href="#" class="photo">
+                <router-link to="/purchase" class="photo">
                   <img title="8号溪云初起巧克力蛋糕" alt="8号溪云初起巧克力蛋糕" src="./img/100001082_M.jpg"/>
-                </a>
+                </router-link>
                 <strong>溪云初起巧克力蛋糕</strong>
                 <em> ¥258.00</em>
               </li>
               <li>
-                <a href="#" class="photo">
+                <router-link to="/purchase" class="photo">
                   <img title="8号溪云初起巧克力蛋糕" alt="8号溪云初起巧克力蛋糕" src="./img/100001082_M.jpg"/>
-                </a>
+                </router-link>
                 <strong>溪云初起巧克力蛋糕</strong>
                 <em> ¥258.00</em>
               </li>
               <li>
-                <a href="#" class="photo">
+                <router-link to="/purchase" class="photo">
                   <img title="8号溪云初起巧克力蛋糕" alt="8号溪云初起巧克力蛋糕" src="./img/100001082_M.jpg"/>
-                </a>
+                </router-link>
                 <strong>溪云初起巧克力蛋糕</strong>
                 <em> ¥258.00</em>
               </li>
               <li>
-                <a href="#" class="photo">
+                <router-link to="/purchase" class="photo">
                   <img title="8号溪云初起巧克力蛋糕" alt="8号溪云初起巧克力蛋糕" src="./img/100001082_M.jpg"/>
-                </a>
+                </router-link>
                 <strong>溪云初起巧克力蛋糕</strong>
                 <em> ¥258.00</em>
               </li>
@@ -122,37 +122,37 @@
           <div class="Tab_nr">
             <ul class="ProductList3">
               <li>
-                <a href="#" class="photo">
+                <router-link to="/purchase" class="photo">
                   <img title="8号溪云初起巧克力蛋糕" alt="8号溪云初起巧克力蛋糕" src="./img/100001174_M.jpg"/>
-                </a>
+                </router-link>
                 <strong>溪云初起巧克力蛋糕</strong>
                 <em> ¥258.00</em>
               </li>
               <li>
-                <a href="#" class="photo">
+                <router-link to="/purchase" class="photo">
                   <img title="8号溪云初起巧克力蛋糕" alt="8号溪云初起巧克力蛋糕" src="./img/100001174_M.jpg"/>
-                </a>
+                </router-link>
                 <strong>溪云初起巧克力蛋糕</strong>
                 <em> ¥258.00</em>
               </li>
               <li>
-                <a href="#" class="photo">
+                <router-link to="/purchase" class="photo">
                   <img title="8号溪云初起巧克力蛋糕" alt="8号溪云初起巧克力蛋糕" src="./img/100001174_M.jpg"/>
-                </a>
+                </router-link>
                 <strong>溪云初起巧克力蛋糕</strong>
                 <em> ¥258.00</em>
               </li>
               <li>
-                <a href="#" class="photo">
+                <router-link to="/purchase" class="photo">
                   <img title="8号溪云初起巧克力蛋糕" alt="8号溪云初起巧克力蛋糕" src="./img/100001174_M.jpg"/>
-                </a>
+                </router-link>
                 <strong>溪云初起巧克力蛋糕</strong>
                 <em> ¥258.00</em>
               </li>
               <li>
-                <a href="#" class="photo">
+                <router-link to="/purchase" class="photo">
                   <img title="8号溪云初起巧克力蛋糕" alt="8号溪云初起巧克力蛋糕" src="./img/100001174_M.jpg"/>
-                </a>
+                </router-link>
                 <strong>溪云初起巧克力蛋糕</strong>
                 <em> ¥258.00</em>
               </li>
@@ -164,37 +164,37 @@
           <div class="Tab_nr">
             <ul class="ProductList3">
               <li>
-                <a href="#" class="photo">
+                <router-link to="/purchase" class="photo">
                   <img title="8号溪云初起巧克力蛋糕" alt="8号溪云初起巧克力蛋糕" src="./img/600000224_M.jpg"/>
-                </a>
+                </router-link>
                 <strong>溪云初起巧克力蛋糕</strong>
                 <em> ¥258.00</em>
               </li>
               <li>
-                <a href="#" class="photo">
+                <router-link to="/purchase" class="photo">
                   <img title="8号溪云初起巧克力蛋糕" alt="8号溪云初起巧克力蛋糕" src="./img/600000224_M.jpg"/>
-                </a>
+                </router-link>
                 <strong>溪云初起巧克力蛋糕</strong>
                 <em> ¥258.00</em>
               </li>
               <li>
-                <a href="#" class="photo">
+                <router-link to="/purchase" class="photo">
                   <img title="8号溪云初起巧克力蛋糕" alt="8号溪云初起巧克力蛋糕" src="./img/600000224_M.jpg"/>
-                </a>
+                </router-link>
                 <strong>溪云初起巧克力蛋糕</strong>
                 <em> ¥258.00</em>
               </li>
               <li>
-                <a href="#" class="photo">
+                <router-link to="/purchase" class="photo">
                   <img title="8号溪云初起巧克力蛋糕" alt="8号溪云初起巧克力蛋糕" src="./img/600000224_M.jpg"/>
-                </a>
+                </router-link>
                 <strong>溪云初起巧克力蛋糕</strong>
                 <em> ¥258.00</em>
               </li>
               <li>
-                <a href="#" class="photo">
+                <router-link to="/purchase" class="photo">
                   <img title="8号溪云初起巧克力蛋糕" alt="8号溪云初起巧克力蛋糕" src="./img/600000224_M.jpg"/>
-                </a>
+                </router-link>
                 <strong>溪云初起巧克力蛋糕</strong>
                 <em> ¥258.00</em>
               </li>
@@ -222,28 +222,28 @@
       </div>
       <ul class="ProductList">
         <li>
-          <a href="#" class="photo">
+          <router-link to="/purchase" class="photo">
             <img title="6号朝羽鲜奶蛋糕" alt="6号朝羽鲜奶蛋糕" src="./img/100001428_M.jpg"/>
             <strong>朝羽鲜奶蛋糕 </strong>
             <span> 寓意良辰美景， 幸福的时刻</span>
             <em>¥198.00 </em>
-          </a>
+          </router-link>
         </li>
         <li>
-          <a href="#" class="photo">
+          <router-link to="/purchase" class="photo">
             <img title="6号纤云弄巧鲜奶蛋糕（迷情蓝莓风）" alt="6号纤云弄巧鲜奶蛋糕（迷情蓝莓风）" src="./img/100000805_M.jpg"/>
             <strong>纤云弄巧鲜奶蛋糕（迷情蓝莓风）  </strong>
             <span>  带给你浓郁的蓝莓风味</span>
             <em>¥198.00 </em>
-          </a>
+          </router-link>
         </li>
         <li>
-          <a href="#" class="photo">
+          <router-link to="/purchase" class="photo">
             <img title="以花为名鲜奶蛋糕" alt="以花为名鲜奶蛋糕" src="./img/100000962_M.jpg"/>
             <strong>以花为名鲜奶蛋糕 </strong>
             <span> 让“世界上第一个挺你的妈妈”，成为幸福的妈妈</span>
             <em>¥258.00 </em>
-          </a>
+          </router-link>
         </li>
       </ul>
     </div>
@@ -265,28 +265,28 @@
       </div>
       <ul class="ProductList">
         <li>
-          <a href="#" class="photo">
+          <router-link to="/purchase" class="photo">
             <img title="藤椒牛肉粽竹篮版" alt="藤椒牛肉粽竹篮版" src="./img/100001362_M.jpg"/>
             <strong>藤椒牛肉粽</strong>
             <span> 麻辣爽口，料多馅足，优选牛柳</span>
             <em>¥268.00</em>
-          </a>
+          </router-link>
         </li>
         <li>
-          <a href="#" class="photo">
+          <router-link to="/purchase" class="photo">
             <img title="6号纤云弄巧鲜奶蛋糕（迷情蓝莓风）" alt="6号纤云弄巧鲜奶蛋糕（迷情蓝莓风）" src="./img/100000805_M.jpg"/>
             <strong>纤云弄巧鲜奶蛋糕（迷情蓝莓风）  </strong>
             <span>  带给你浓郁的蓝莓风味</span>
             <em>¥198.00 </em>
-          </a>
+          </router-link>
         </li>
         <li>
-          <a href="#" class="photo">
+          <router-link to="/purchase" class="photo">
             <img title="以花为名鲜奶蛋糕" alt="以花为名鲜奶蛋糕" src="./img/100000962_M.jpg"/>
             <strong>以花为名鲜奶蛋糕 </strong>
             <span> 让“世界上第一个挺你的妈妈”，成为幸福的妈妈</span>
             <em>¥258.00 </em>
-          </a>
+          </router-link>
         </li>
       </ul>
     </div>
@@ -308,28 +308,28 @@
       </div>
       <ul class="ProductList">
         <li>
-          <a href="#" class="photo">
+          <router-link to="/purchase" class="photo">
             <img title="小西点虎皮卷" alt="小西点虎皮卷" src="./img/100000235_M.jpg"/>
             <strong>西点卷</strong>
             <span>  卷起来的幸福</span>
             <em>¥10.00</em>
-          </a>
+          </router-link>
         </li>
         <li>
-          <a href="#" class="photo">
+          <router-link to="/purchase" class="photo">
             <img title="6号纤云弄巧鲜奶蛋糕（迷情蓝莓风）" alt="6号纤云弄巧鲜奶蛋糕（迷情蓝莓风）" src="./img/100000805_M.jpg"/>
             <strong>纤云弄巧鲜奶蛋糕（迷情蓝莓风）  </strong>
             <span>  带给你浓郁的蓝莓风味</span>
             <em>¥198.00 </em>
-          </a>
+          </router-link>
         </li>
         <li>
-          <a href="#" class="photo">
+          <router-link to="/purchase" class="photo">
             <img title="以花为名鲜奶蛋糕" alt="以花为名鲜奶蛋糕" src="./img/100000962_M.jpg"/>
             <strong>以花为名鲜奶蛋糕 </strong>
             <span> 让“世界上第一个挺你的妈妈”，成为幸福的妈妈</span>
             <em>¥258.00 </em>
-          </a>
+          </router-link>
         </li>
       </ul>
     </div>
@@ -341,23 +341,23 @@
       <ul class="imgList">
         <li>
           <div class="simple_disp-img">
-            <a href="#">
+            <router-link to="/purchase">
               <img src="./img/49731.jpg"/>
-            </a>
+            </router-link>
           </div>
         </li>
         <li>
           <div class="simple_disp-img">
-            <a href="#">
+            <router-link to="/purchase">
               <img src="./img/49732.jpg"/>
-            </a>
+            </router-link>
           </div>
         </li>
         <li>
           <div class="simple_disp-img">
-            <a href="#">
+            <router-link to="/purchase">
               <img src="./img/49733.jpg"/>
-            </a>
+            </router-link>
           </div>
         </li>
       </ul>

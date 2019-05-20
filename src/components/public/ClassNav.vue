@@ -3,14 +3,14 @@
     <div class="center">
       <ul class="menus">
         <li>
-          <a href="#" title="元祖商城">元祖商城</a>
+          <router-link to="/" title="元祖商城">元祖商城</router-link>
         </li>
         <li></li>
         <li>
-          <a href="#" title="品牌故事">品牌故事</a>
+          <router-link to="/BrandStory" title="品牌故事">品牌故事</router-link>
         </li>
         <li>
-          <a href="#" title="元祖推荐">元祖推荐</a>
+          <router-link to="/" title="元祖推荐">元祖推荐</router-link>
         </li>
         <li></li>
         <li></li>
@@ -23,59 +23,59 @@
             <li class="hui_bg">
               <strong>
                 <span class="icon1 wizard0" style="background-position: 0px 0px;"></span>
-                <a href="#">元祖端午季</a>
+                <router-link to="/SearchList">元祖端午季</router-link>
               </strong>
-              <a href="#">纸质提货券</a>
-              <a href="#">端午礼盒</a>
-              <a href="#">电子提货券</a>
+              <router-link to="/SearchList">纸质提货券</router-link>
+              <router-link to="/SearchList">端午礼盒</router-link>
+              <router-link to="/SearchList">电子提货券</router-link>
               </li>
             <li>
               <strong>
                 <span class="icon1 wizard1" style="background-position: 0px 0px;"></span>
-                <a href="#">元祖梦蛋糕</a>
+                <router-link to="/SearchList">元祖梦蛋糕</router-link>
               </strong>
-              <a href="#">母亲节专款</a>
-              <a href="#">鲜奶蛋糕</a>
-              <a href="#">巧克力蛋糕</a>
-              <a href="#">慕思蛋糕</a>
-              <a href="#">多层蛋糕</a>
+              <router-link to="/SearchList">母亲节专款</router-link>
+              <router-link to="/SearchList">鲜奶蛋糕</router-link>
+              <router-link to="/SearchList">巧克力蛋糕</router-link>
+              <router-link to="/SearchList">慕思蛋糕</router-link>
+              <router-link to="/SearchList">多层蛋糕</router-link>
             </li>
             <li class="hui_bg">
               <strong>
                 <span class="icon1 wizard2" style="background-position: 0px 0px;"></span>
-                <a href="#">冰品季</a>
+                <router-link to="/SearchList">冰品季</router-link>
               </strong>
-              <a href="#">冰淇淋蛋糕</a>
-              <a href="#">冰品点心</a>
+              <router-link to="/SearchList">冰淇淋蛋糕</router-link>
+              <router-link to="/SearchList">冰品点心</router-link>
             </li>
             <li>
               <strong>
                 <span class="icon1 wizard3" style="background-position: 0px 0px;"></span>
-                <a href="#">元祖礼盒</a>
+                <router-link to="/SearchList">元祖礼盒</router-link>
               </strong>
-              <a href="#">水果礼盒</a>
-              <a href="#">糕点礼盒</a>
+              <router-link to="/SearchList">水果礼盒</router-link>
+              <router-link to="/SearchList">糕点礼盒</router-link>
             </li>
             <li class="hui_bg">
               <strong>
                 <span class="icon1 wizard4" style="background-position: 0px 0px;"></span>
-                <a href="#">精致西点</a>
+                <router-link href="#">精致西点</router-link>
               </strong>
-              <a href="#">小慕思类</a>
-              <a href="#">西点卷类</a>
-              <a href="#">麻糬类</a>
-              <a href="#">其他</a>
+              <router-link to="/SearchList">小慕思类</router-link>
+              <router-link to="/SearchList">西点卷类</router-link>
+              <router-link to="/SearchList">麻糬类</router-link>
+              <router-link to="/SearchList">其他</router-link>
             </li>
             <li>
               <strong>
                 <span class="icon1 wizard5" style="background-position: 0px 0px;"></span>
-                <a href="#">元祖卡券</a>
+                <router-link href="#">元祖卡券</router-link>
               </strong>
-              <a href="#">礼卡</a>
-              <a href="#">水果券</a>
-              <a href="#">西点券</a>
-              <a href="#">蛋糕券</a>
-              <a href="#">电子券</a>
+              <router-link to="/SearchList">礼卡</router-link>
+              <router-link to="/SearchList">水果券</router-link>
+              <router-link to="/SearchList">西点券</router-link>
+              <router-link to="/SearchList">蛋糕券</router-link>
+              <router-link to="/SearchList">电子券</router-link>
             </li>
           </ul>
         </div>
