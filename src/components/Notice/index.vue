@@ -1,11 +1,15 @@
 <template>
-  <div class="Notice allcolor">
+   <div class="Notice allcolor">
+     <TopNavigation/>
+     <TopBanner/>
+     <search/>
+     <ClassNav/>
     <!--元祖公告一-（刘璐-->
     <!--元祖公告导航-->
     <div class="Notice-head">
-      <router-link to="/#" class="gray fonts-14">主页</router-link>
+      <router-link to="/#" class="gray fonts-12">主页</router-link>
       >
-      <router-link to="#" class="gray fonts-14"> 元祖公告44（18年中秋月饼销毁公告）</router-link>
+      <router-link to="#" class="gray fonts-12"> 元祖公告44（18年中秋月饼销毁公告）</router-link>
     </div>
     <div class="Notice-cotainer">
       <div class="Notice-logo">
@@ -35,10 +39,23 @@
         </span>
       </div>
     </div>
+     <BottomNav/>
   </div>
 </template>
 <script>
+import TopNavigation from '@/components/public/TopNavigation.vue'
+import TopBanner from '@/components/public/TopBanner.vue'
+import search from '@/components/public/search.vue'
+import ClassNav from '@/components/public/ClassNav.vue'
+import BottomNav from '@/components/public/BottomNavigation.vue'
 export default {
+  components: {
+    TopNavigation,
+    TopBanner,
+    search,
+    ClassNav,
+    BottomNav
+  },
   // 文档加载完成
   mounted () {
     console.log(this.$route.params.id)
@@ -55,7 +72,7 @@ export default {
     width: 1199px;
     height: 45px;
     padding-top: 10px;
-    margin: 0 auto;
+    margin: 10px auto;
   }
   /*导航过渡*/
   .Notice-head a:nth-of-type(1):hover,.Notice-head a:nth-of-type(2):hover{

@@ -5,8 +5,8 @@ import login from '@/components/sign/index.vue'// 登录注册
 import register from '@/components/sign/register.vue'
 import password from '@/components/sign/login.vue'
 import Member from '@/components/Member/index.vue'// 会员中心公共组件
-import purchase from '@/components/purchase/index.vue'
 import ShoppingCart from '@/components/ShoppingCart/index.vue'
+import purchase from '@/components/purchase/index.vue'
 import BrandStory from '@/components/BrandStory/index.vue'// 品牌故事
 import TopNavigation from '@/components/public/TopNavigation.vue' // 顶部
 import TopBanner from '@/components/public/TopBanner.vue' // 顶部导航
@@ -51,9 +51,9 @@ export default new Router({
       ]
     },
     {
-      path: '/register',
+      path: '/purchase',
       components: {
-        default: register
+        default: purchase
       }
     },
     {
@@ -101,9 +101,11 @@ export default new Router({
       },
       {
         path: 'details',
-        components: details
+        components: {
+          details
+        }
       }
-    ]
+      ]
     },
     {
       path: '/purchase',
@@ -188,6 +190,12 @@ export default new Router({
       }
     },
     {
+      path: '/purchase',
+      components: {
+        default: purchase
+      }
+    },
+    {
       path: '/MyInformation', // 我的资料
       components: {
         default: MyInformation,
@@ -195,9 +203,16 @@ export default new Router({
       }
     },
     {
-      path: '/cl', // 我的资料
+      path: '/cl',
       components: {
         default: City,
+        default: MyInformation
+      }
+    },
+    {
+      path: '/Agreement', // 我的资料
+      components: {
+        default: Agreement // 注册协议
       }
     }
   ]

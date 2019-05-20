@@ -4,7 +4,7 @@
     <div class="logo">
       <div class="yCmsComponent">
         <div class="simple_disp-img" style="line-height: 69px">
-          <a><img src="./img/logo.png"></a>
+          <router-link to="/"><img src="./img/logo.png"></router-link>
         </div>
       </div>
     </div>
@@ -14,9 +14,9 @@
          <button class="btn_send" type="submit">搜索</button>
          <P>
            热门搜索：
-           <a href="#" title="元祖梦蛋糕">元祖梦蛋糕</a>
-           <a href="#" title="精致西点">精致西点</a>
-           <a href="#" title="端午季">端午季</a>
+           <router-link to="/SearchList" title="元祖梦蛋糕">元祖梦蛋糕</router-link>
+           <router-link to="/SearchList" title="精致西点">精致西点</router-link>
+           <router-link to="/SearchList" title="端午季">端午季</router-link>
          </P>
        </form>
      </div>

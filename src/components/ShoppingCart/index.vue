@@ -1,7 +1,7 @@
 <template>
   <div>
     <!--购物车-->
-    <div class="display">
+    <div id="car1" class="display">
       <div class="Cartop fonts-12 allcolor gray">
         <a href="#">主页</a>
         >
@@ -63,13 +63,13 @@
           <div class="statistical">总计： ¥258.00</div>
           <div class="carbtn">
             <a href="#">继续购物</a>
-            <a href="#">结算</a>
+            <a href="#" @click="jiesuan">结算</a>
           </div>
         </div>
       </div>
     </div>
     <!--提交订单-->
-    <div class="display2">
+    <div id="car2" class="display2">
       <div class="Cartop fonts-12 allcolor gray">
         <a href="#">主页</a>
         >
@@ -256,12 +256,12 @@
               <dd>¥258.00</dd>
             </dl>
           </div>
-          <form><a href="#">下订单</a> </form>
+          <form><a href="#" @click="xiadan">下订单</a> </form>
         </div>
       </div>
     </div>
     <!--提交成功-->
-    <div class="display3">
+    <div id="car3" class="display3">
       <div class="Cartop fonts-12 allcolor gray">
         <a href="#">主页</a>
         >
@@ -288,7 +288,7 @@
           </p>
           <p class="hei">
             您选择的支付方式为：<img src="https://mall.ganso.com.cn/_ui/hepimages/submit/alipay.jpg">
-            <a href="#">立即支付</a>
+            <router-link to="/">立即支付</router-link>
           </p>
           <p >如果您在购物中遇到任何问题请及时咨询我们的客服人员，或拨打400-110-3737</p>
         </div>
@@ -312,7 +312,25 @@
             done();
           })
           .catch(_ => {});
-      }
+      },
+      jiesuan:function () {
+        let car1 = document.querySelector("#car1")
+        let car2 = document.querySelector("#car2")
+        let car3 = document.querySelector("#car3")
+        car1.style.display = "none"
+        car2.style.display = "block"
+        car3.style.display = "none"
+        console.log(sss)
+      },
+      xiadan:function () {
+        let car1 = document.querySelector("#car1")
+        let car2 = document.querySelector("#car2")
+        let car3 = document.querySelector("#car3")
+        car1.style.display = "none"
+        car2.style.display = "none"
+        car3.style.display = "block"
+        console.log(sss)
+      },
     }
   }
 </script>

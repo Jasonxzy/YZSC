@@ -16,31 +16,35 @@
       </div>
       <!--官方微博-->
       <div class="weibo">
+        <a href="http://weibo.com/gansofood">
         <img src="./img/icon_sina.png"/>
         <span>官方微博</span>
+        </a>
       </div>
       <!--台湾元祖-->
       <div class="tw">
+        <a href="http://www.ganso.com.tw/">
         <img src="./img/icon_tw.png"/>
         <span>台湾元祖</span>
+        </a>
       </div>
     </div>
     <div class="userbar">
       <div class="wenhou">
-        <a>登录/注册</a>
+        <router-link to="/login">登录/注册</router-link>
       </div>
       <ul>
         <li>
-          <a>会员中心</a>
+          <router-link to="/Member">会员中心</router-link>
         </li>
         <li>
-          <a>购物车</a>
+          <router-link to="/ShoppingCart">购物车</router-link>
         </li>
         <li>
           <a>元祖门店</a>
         </li>
         <li>
-          <a>帮助中心</a>
+          <router-link to="/HelpCenter">帮助中心</router-link>
         </li>
       </ul>
     </div>
