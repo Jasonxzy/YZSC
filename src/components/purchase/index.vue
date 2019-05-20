@@ -1,5 +1,13 @@
 <template>
   <div>
+    <!--顶部导航-->
+    <TopNavigation/>
+    <!--导航banner-->
+    <TopBanner/>
+    <!--搜索部分-->
+    <search/>
+    <!--分类导航部分-->
+    <ClassNav/>
     <!--内容页头部-->
     <div class="YZ-top fonts-12 allcolor">
       <router-link to="/" >主页</router-link>
@@ -160,54 +168,89 @@
           </li>
         </ul>
       </div>
+      <span class="clear"></span>
      </div>
+    <BottomNav/>
   </div>
 </template>
 <script>
-  import img1 from "../public/img/100000027_M.jpg"
-  import img2 from "../public/img/100001236_M.jpg"
-  import img3 from "../public/img/100001239_M.jpg"
-  import img4 from "../public/img/100000027_M.jpg"
-  import img5 from "../public/img/100001236_M.jpg"
-  import img6 from "../public/img/100001239_M.jpg"
-  import iagms1 from "./img/100000805_1.jpg"
-  import iagms2 from "./img/100000805_L.jpg"
-  import iagms3 from "./img/100000805_L2.jpg"
-  export default {
-    name: "guessLike",
-    data () {
-      return {
-//        handleMove: true,
-        imgList: [
-          {img:iagms1},
-          {img:iagms2},
-          {img:iagms3}
-        ],
-        min_img: img1,
-        minImg: img6,
-        num8:1,
-        dialogVisible: false,
-        activeName: 'first',
-        value1: null,
-        value2: null,
-        current2: 0,
-        menu: ['蓝莓味', '草莓味', '芒果味'],
-        index: 0,
-        list: [
-          {name: "甜蜜如心鲜奶蛋糕", img: img1, monery: "258.00"},
-          {name: "朵朵咖啡鲜奶蛋糕", img: img2, monery: "268.00"},
-          {name: "8号桃花扇鲜奶蛋糕", img: img3, monery: "278.00"},
-          {name: "甜蜜如心鲜奶蛋糕", img: img4, monery: "258.00"},
-          {name: "朵朵咖啡鲜奶蛋糕", img: img5, monery: "268.00"},
-          {name: "8号桃花扇鲜奶蛋糕", img: img6, monery: "278.00"}
-        ],
-        selectorList:[
-          {name: "款式1"},
-          {name: "款式2"},
-          {name: "款式3"},
-        ]
-      }
+import img1 from "../public/img/100000027_M.jpg"
+import img2 from "../public/img/100001236_M.jpg"
+import img3 from "../public/img/100001239_M.jpg"
+import img4 from "../public/img/100000027_M.jpg"
+import img5 from "../public/img/100001236_M.jpg"
+import img6 from "../public/img/100001239_M.jpg"
+import iagms1 from "./img/100000805_1.jpg"
+import iagms2 from "./img/100000805_L.jpg"
+import iagms3 from "./img/100000805_L2.jpg"
+import TopNavigation from '../public/TopNavigation.vue'
+import TopBanner from '../public/TopBanner.vue'
+import search from '../public/search.vue'
+import ClassNav from '../public/ClassNav.vue'
+import BottomNav from '../public/BottomNavigation.vue'
+export default {
+  components: {
+    TopNavigation,
+    TopBanner,
+    search,
+    ClassNav,
+    BottomNav
+  },
+  name: "guessLike",
+  data () {
+    return {
+      //   handleMove: true,
+      imgList: [
+        {img:iagms1},
+        {img:iagms2},
+        {img:iagms3}
+      ],
+      min_img: img1,
+      minImg: img6,
+      num8:1,
+      dialogVisible: false,
+      activeName: 'first',
+      value1: null,
+      value2: null,
+      current2: 0,
+      menu: ['蓝莓味', '草莓味', '芒果味'],
+      index: 0,
+      list: [
+        {name: "甜蜜如心鲜奶蛋糕", img: img1, monery: "258.00"},
+        {name: "朵朵咖啡鲜奶蛋糕", img: img2, monery: "268.00"},
+        {name: "8号桃花扇鲜奶蛋糕", img: img3, monery: "278.00"},
+        {name: "甜蜜如心鲜奶蛋糕", img: img4, monery: "258.00"},
+        {name: "朵朵咖啡鲜奶蛋糕", img: img5, monery: "268.00"},
+        {name: "8号桃花扇鲜奶蛋糕", img: img6, monery: "278.00"}
+      ],
+      selectorList:[
+        {name: "款式1"},
+        {name: "款式2"},
+        {name: "款式3"},
+      ]
+    }
+  },
+  methods: {
+    handleClick (tab, event) {
+      //        console.log(tab, event)
     },
+    son (item, idx) {
+      this.index = idx;
+    },
+    handleChange (value) {
+      //        console.log(value);
+    },
+    sas: function () {
+      let fontw = document.querySelector("#fontw")
+      let rr = document.querySelector("#rr")
+      let aa = document.querySelector("#aa")
+      let disn = document.querySelector("#disn")
+      fontw.style.display = "block"
+      aa.style.display = "none"
+      rr.style.display = "block"
+      disn.style.display = "none"
+    },
+<<<<<<< HEAD
     methods: {
       handleClick (tab, event) {
         console.log(tab, event)
@@ -246,10 +289,32 @@
       changeBorder1:function (index) {
         this.current2 = index
         console.log(this.current2)
+=======
+    ee: function () {
+      let fontw = document.querySelector("#fontw")
+      let rr = document.querySelector("#rr")
+      let aa = document.querySelector("#aa")
+      let disn = document.querySelector("#disn")
+      disn.style.display = "block"
+      fontw.style.display = "none"
+      rr.style.display = "none"
+      aa.style.display = "block"
+    },
+    lev:function (i,index) {
+      this.curren = index
+      this.min_img = i.img
+    },
+    changeBorder1:function (index) {
+      this.current2 = index
+      console.log(this.current2)
+>>>>>>> 86cdd0f34c0252ac8c5799fceb4df8043091f38e
 
-      }
     }
   }
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 86cdd0f34c0252ac8c5799fceb4df8043091f38e
 </script>
 <style lang="less"  scoped>
   .change{
@@ -602,7 +667,7 @@
           }
         }
       }
-      /deep/.vue-magnify .zoom-box[data-v-0443e94f]{
+/deep/.vue-magnify .zoom-box[data-v-0443e94f]{
         z-index:9999;
       }
     }

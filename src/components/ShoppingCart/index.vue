@@ -1,5 +1,13 @@
 <template>
   <div>
+    !--顶部导航-->
+    <TopNavigation/>
+    <!--导航banner-->
+    <TopBanner/>
+    <!--搜索部分-->
+    <search/>
+    <!--分类导航部分-->
+    <ClassNav/>
     <!--购物车-->
     <div id="car1" class="display">
       <div class="Cartop fonts-12 allcolor gray">
@@ -67,6 +75,7 @@
           </div>
         </div>
       </div>
+      <span class="clear"></span>
     </div>
     <!--提交订单-->
     <div id="car2" class="display2">
@@ -294,45 +303,57 @@
         </div>
       </div>
     </div>
-
+    <BottomNav/>
   </div>
 </template>
 <script>
-  export default {
-    data() {
-      return {
-        num1: 1,
-        dialogVisible: false
-      };
+import TopNavigation from '../public/TopNavigation.vue'
+import TopBanner from '../public/TopBanner.vue'
+import search from '../public/search.vue'
+import ClassNav from '../public/ClassNav.vue'
+import BottomNav from '../public/BottomNavigation.vue'
+export default {
+  components: {
+    TopNavigation,
+    TopBanner,
+    search,
+    ClassNav,
+    BottomNav
+  },
+  data () {
+    return {
+      num1: 1,
+      dialogVisible: false
+    };
+  },
+  methods: {
+    handleClose(done) {
+      this.$confirm('确认关闭？')
+        .then(_ => {
+          done();
+        })
+        .catch(_ => {});
     },
-    methods: {
-      handleClose(done) {
-        this.$confirm('确认关闭？')
-          .then(_ => {
-            done();
-          })
-          .catch(_ => {});
-      },
-      jiesuan:function () {
-        let car1 = document.querySelector("#car1")
-        let car2 = document.querySelector("#car2")
-        let car3 = document.querySelector("#car3")
-        car1.style.display = "none"
-        car2.style.display = "block"
-        car3.style.display = "none"
-        console.log(sss)
-      },
-      xiadan:function () {
-        let car1 = document.querySelector("#car1")
-        let car2 = document.querySelector("#car2")
-        let car3 = document.querySelector("#car3")
-        car1.style.display = "none"
-        car2.style.display = "none"
-        car3.style.display = "block"
-        console.log(sss)
-      },
+    jiesuan:function () {
+      let car1 = document.querySelector("#car1")
+      let car2 = document.querySelector("#car2")
+      let car3 = document.querySelector("#car3")
+      car1.style.display = "none"
+      car2.style.display = "block"
+      car3.style.display = "none"
+      console.log(sss)
+    },
+    xiadan:function () {
+      let car1 = document.querySelector("#car1")
+      let car2 = document.querySelector("#car2")
+      let car3 = document.querySelector("#car3")
+      car1.style.display = "none"
+      car2.style.display = "none"
+      car3.style.display = "block"
+      console.log(sss)
     }
   }
+}
 </script>
 <style lang="less"  scoped>
   /*购物车*/
