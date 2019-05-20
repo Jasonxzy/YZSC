@@ -4,6 +4,8 @@ import ElementUi from 'element-ui'
 import router from './router'
 import 'element-ui/lib/theme-chalk/index.css'
 import '@/public-css/public.less'
+import vueMagnify from 'vue-magnify'
+Vue.use(vueMagnify)
 Vue.use(ElementUi)
 new Vue({
   el: '#app',

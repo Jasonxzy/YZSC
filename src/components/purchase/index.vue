@@ -2,15 +2,15 @@
   <div>
     <!--内容页头部-->
     <div class="YZ-top fonts-12 allcolor">
-      <a href="#">主页</a>
+      <router-link to="/" >主页</router-link>
       >
-      <a href="#">元祖商城</a>
+      <router-link to="/" >元祖商城</router-link>
       >
-      <a href="#">冰品季</a>
+      <router-link to="" >冰品季</router-link>
       >
-      <a href="#">冰品点心</a>
+      <router-link to="" >冰品点心</router-link>
       >
-      <a href="#">糯米拥抱冰淇淋</a>
+      <router-link to="" >糯米拥抱冰淇淋</router-link>
     </div>
     <!--内容页内容部分-->
     <div class="YZ-bottom allcolor">
@@ -21,10 +21,17 @@
           <!--图片展示和左右点击-->
           <div class="productleft float-l">
             <div class="shopimg">
-              <img src="http://pic.ganso.com.cn/images1/100000769/100000769_L.jpg" />
+              <vue-magnify
+                :previewImg="minImg"
+                :zoomImg="minImg">
+              </vue-magnify>
+              <!--<img src="" />-->
             </div>
             <div class="puchase-carousel padding-T-20">
-              <div class="puchase-carousel-left float-l"> <img src="http://mall.ganso.com.cn/_ui/hepimages/left.gif" /> </div>
+              <div class="puchase-carousel-left float-l">
+                <img src="http://mall.ganso.com.cn/_ui/hepimages/left.gif" />
+              </div>
+
               <div class="puchase-carousel-content float-l">
                 <ul>
                   <li><img src="http://pic.ganso.com.cn/images1/100000768/100000768_L.jpg" /> </li>
@@ -56,15 +63,9 @@
             <div class="shop-number margin-B-25">
               <div class="fonts-14 float-l shu lightgray">数量:</div>
           <ul><li>
-            <div class="float-l shop-number-left">
-              <input type="" value="1"/>
-            </div>
-            <div class="float-r shop-number-right">
-              <span class="add" >+</span>
-              <span class="less" >-</span>
-            </div>
+            <el-input-number v-model="num8" controls-position="right" @change="handleChange"></el-input-number>
           </li></ul>
-          <button class="buy fonts-20 float-l red2 buypinkred">立即购买</button>
+          <button class="buy fonts-20 float-l buypinkred"><router-link to="">立即购买</router-link></button>
               <button class="join fonts-20 float-l white joinred">
                 <el-popover ref="popover2" placement="top-start" title="成功加入购物车" width="200" trigger="click"
                   content="">
@@ -112,17 +113,14 @@
           <el-tab-pane label="商品评价" name="second">
             <div class="ProductShow2">
               <div  class="productshow-tabbody2">
-                <div class="productshow-tabbody-content2" style="display: none">
+                <div class="productshow-tabbody-content2" style="display: block">
                   <div class="borderbottom">
-                    <i class="header-icon el-icon-caret-right lightgray fontw fonts-12">
-                      <router-link to="/login">欢迎您第一个发表评论</router-link>
-                    </i>
+                    <i class="header-icon el-icon-caret-right lightgray fontw fonts-12 float-l" id="disn"></i>
+                    <router-link to="#" @click.native="sas" id="aa">欢迎您第一个发表评论</router-link>
                     <div class="float-r">0/0评论</div>
                   </div>
-
                 </div>
-
-                <div class="productshow-tabbody-content2">
+                <div id="fontw" class="productshow-tabbody-content2 " style="display: none">
                   <div class="content2-title fonts-12 fontw">发表评论</div>
                   <div class="content2-published fonts-12 lightgrey">
                     <div class="float-l">请输入您的评论</div>
@@ -140,8 +138,8 @@
                     <button>提交评论</button>
                   </div>
                   <div class="content2-return">
-                    <i class="header-icon el-icon-caret-right lightgray fontw fonts-12">
-                      <router-link to="/login">返回评论</router-link>
+                    <i class="header-icon el-icon-caret-right lightgray fontw fonts-12 float-l padding-T-5">
+                      <router-link to="#" @click.native="ee" id="rr" class="float-r">返回评论</router-link>
                     </i>
                   </div>
                 </div>
@@ -173,6 +171,9 @@
     name: "guessLike",
     data () {
       return {
+//        handleMove: true,
+        minImg:"http://pic.ganso.com.cn/images1/100000769/100000769_L.jpg",
+        num8:1,
         dialogVisible: false,
         activeName: 'first',
         value1: null,
@@ -188,12 +189,33 @@
     },
     methods: {
       handleClick (tab, event) {
-        console.log(tab, event)
-      }
-    },
-    methods: {
+//        console.log(tab, event)
+      },
       son (item, idx) {
         this.index = idx;
+      },
+      handleChange(value) {
+//        console.log(value);
+      },
+      sas:function () {
+        let fontw = document.querySelector("#fontw")
+        let rr = document.querySelector("#rr")
+        let aa = document.querySelector("#aa")
+        let disn = document.querySelector("#disn")
+        fontw.style.display = "block"
+        aa.style.display = "none"
+        rr.style.display = "block"
+        disn.style.display = "none"
+      },
+      ee:function () {
+        let fontw = document.querySelector("#fontw")
+        let rr = document.querySelector("#rr")
+        let aa = document.querySelector("#aa")
+        let disn = document.querySelector("#disn")
+        disn.style.display = "block"
+        fontw.style.display = "none"
+        rr.style.display = "none"
+        aa.style.display = "block"
       }
     }
   }
@@ -209,6 +231,7 @@
     line-height: 45px;
     margin: 0 auto;
     a{
+      /*color: yellow;*/
       &:hover{
         color:#E93D6D;
       }
@@ -315,43 +338,20 @@
             line-height: 25px;
             ul li {
               float: left;
-              border: 1px solid #ddd;
               background: #fff;
               color: #AEAEAE;
               margin-right: 20px;
               line-height: 38px;
               height: 38px;
-              .shop-number-left {
-                width: 45px;
-                height: 36px;
-                text-align: center;
-                position: relative;
-                border-right: 1px solid #ddd;
-                input {
-                  width: 100%;
-                  height: 100%;
-                  text-align: center;
-                  font-size: 14px;
-                  color: #AEAEAE;
-                  border: 0;
-                  outline: 0;
-                  display: block;
+              /deep/.el-input-number{
+                width: 65px;
+                /deep/.el-input-number__decrease, .el-input-number__increase{
+                  width: 25px;
                 }
               }
-              .shop-number-right {
-                cursor: pointer;
-                .add {
-                  border-bottom: 1px solid #ddd;
-                }
-                span {
-                  display: block;
-                  width: 15px;
-                  height: 50%;
-                  line-height: 18px;
-                  text-align: center;
-                  font-size: 14px;
-                  font-weight: 400;
-                }
+              /deep/.el-input-number.is-controls-right .el-input__inner{
+                padding-left: 8px;
+                padding-right: 35px;
               }
             }
             .buy {
@@ -362,6 +362,9 @@
               text-align: center;
               border: 1px solid #d5014b;
               display: inline;
+              a{
+                color: #C70238
+              }
               &:hover {
                 color: black;
               }
@@ -495,6 +498,10 @@
                 width: 920px;
                 height: 15px;
                 border-bottom: 1px solid #a5a5a5;
+                #disn{
+                  width: 15px;
+                }
+
               }
             }
             /*隐藏部分*/
