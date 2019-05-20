@@ -147,14 +147,11 @@
   </div>
 </template>
 <script>
-  export default {
+export default {
 //    data:{
 //    cur:0
 //   }
-
-
-
-  }
+}
 </script>
 <style lang="less"  scoped>
   a {

@@ -11,15 +11,15 @@
 
 </template>
 <script>
-  import topBanner1 from './img/-333333333333333333333.jpg'
-  import topBanner2 from './img/-333333333333333333333.jpg'
-  export default {
-    data () {
-      return{
-        imglist: [topBanner1, topBanner2]
-      }
+import topBanner1 from './img/-333333333333333333333.jpg'
+import topBanner2 from './img/-333333333333333333333.jpg'
+export default {
+  data () {
+    return {
+      imglist: [topBanner1, topBanner2]
     }
   }
+}
 </script>
 <style>
   .topBanner{

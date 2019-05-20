@@ -38,9 +38,9 @@
   </div>
 </template>
 <script>
-  export default {}
+export default {}
 </script>
-<style>
+<style scoped>
   /*导航*/
   .Notice{
     width: 100%;
