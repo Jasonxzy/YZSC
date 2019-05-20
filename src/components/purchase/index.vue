@@ -194,10 +194,10 @@
       son (item, idx) {
         this.index = idx;
       },
-      handleChange(value) {
+      handleChange (value) {
 //        console.log(value);
       },
-      sas:function () {
+      sas: function () {
         let fontw = document.querySelector("#fontw")
         let rr = document.querySelector("#rr")
         let aa = document.querySelector("#aa")
@@ -207,7 +207,7 @@
         rr.style.display = "block"
         disn.style.display = "none"
       },
-      ee:function () {
+      ee: function () {
         let fontw = document.querySelector("#fontw")
         let rr = document.querySelector("#rr")
         let aa = document.querySelector("#aa")
@@ -218,7 +218,7 @@
         aa.style.display = "block"
       }
     }
-  }
+}
 </script>
 <style lang="less"  scoped>
 

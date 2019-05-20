@@ -34,11 +34,11 @@
           </a>
         </li>
         <li id="btn_cart">
-          <a href="#">
+          <router-link to="/ShoppingCart">
             <span></span>
             <strong>购物车</strong>
             <ins class="count">0</ins>
-          </a>
+          </router-link>
         </li>
         <li id="btn_sc">
           <a href="#">

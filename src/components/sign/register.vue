@@ -1,48 +1,42 @@
 <template>
-  <el-tabs v-model="activeName" @tab-click="handleClick">
-    <el-tab-pane label="登录" name="first">
-      <router-view></router-view>
-    </el-tab-pane>
-    <el-tab-pane label="注册" name="second">
-        <div class="register">
-          <el-form :model="ruleForm" :rules="rules" ref="ruleForm" class="demo-ruleForm" label-width="100px">
-          <el-form-item prop="phone" label="手机">
-              <el-input v-model.number="ruleForm.phone" placeholder="请输入你登录的手机号"></el-input>
-          </el-form-item>
-          <el-form-item prop="email" label="邮箱">
-              <el-input v-model="ruleForm.email" placeholder="请输入你的邮箱"></el-input>
-          </el-form-item>
-          <el-form-item prop="picture" label="验证码">
-              <el-input v-model="ruleForm.picture" placeholder="请输入验证码" class="el-input-phone"></el-input>
-              <img>
-          </el-form-item>
-          <el-form-item prop="Shortmessage" label="短信验证">
-              <el-input v-model="ruleForm.Shortmessage" placeholder="请输入你的手机号" class="el-input-phone"></el-input><a class="a-phone fr">获取验证码</a>
-          </el-form-item>
-              <el-form-item prop="Recommender" label="推荐人">
-              <el-input v-model="ruleForm.Recommender" placeholder="请输入推荐人的手机号"></el-input>
-          </el-form-item>
-          <el-form-item  prop="pass"  label="密码">
-              <el-input type="password" v-model="ruleForm.pass" autocomplete="off" placeholder="请输入你的密码"></el-input>
-          </el-form-item>
-          <el-form-item  prop="checkPass" label=" 确认密码" >
-              <el-input type="password" v-model="ruleForm.checkPass" autocomplete="off" placeholder="请输入确认密码"></el-input>
-          </el-form-item>
-          <div class="automatic cleafx">
-              <input type="checkbox">同意注册协议
-              <a class="fr">注册协议</a>
-          </div>
+
+    <div class="register">
+        <el-form :model="ruleForm" :rules="rules" ref="ruleForm" class="demo-ruleForm" label-width="100px">
+        <el-form-item prop="phone" label="手机">
+            <el-input v-model.number="ruleForm.phone" placeholder="请输入你登录的手机号"></el-input>
+        </el-form-item>
+        <el-form-item prop="email" label="邮箱">
+            <el-input v-model="ruleForm.email" placeholder="请输入你的邮箱"></el-input>
+        </el-form-item>
+        <el-form-item prop="picture" label="验证码">
+            <el-input v-model="ruleForm.picture" placeholder="请输入验证码" class="el-input-phone"></el-input>
+            <img>
+        </el-form-item>
+        <el-form-item prop="Shortmessage" label="短信验证">
+            <el-input v-model="ruleForm.Shortmessage" placeholder="请输入你的手机号" class="el-input-phone"></el-input><a class="a-phone fr">获取验证码</a>
+        </el-form-item>
+            <el-form-item prop="Recommender" label="推荐人">
+            <el-input v-model="ruleForm.Recommender" placeholder="请输入推荐人的手机号"></el-input>
+        </el-form-item>
+        <el-form-item  prop="pass"  label="密码">
+            <el-input type="password" v-model="ruleForm.pass" autocomplete="off" placeholder="请输入你的密码"></el-input>
+        </el-form-item>
+        <el-form-item  prop="checkPass" label=" 确认密码" >
+            <el-input type="password" v-model="ruleForm.checkPass" autocomplete="off" placeholder="请输入确认密码"></el-input>
+        </el-form-item>
+        <div class="automatic cleafx">
+            <input type="checkbox">同意注册协议
+            <a class="fr">注册协议</a>
+        </div>
         <el-form-item>
             <el-button type="primary" @click="submitForm('ruleForm')">提交</el-button>
         </el-form-item>
         </el-form>
     </div>
-    </el-tab-pane>
-  </el-tabs>
 </template>
 <script>
-  export default {
-    data () {
+export default {
+  data () {
     var phone = (rule, value, callback) => {
       if (!value) {
         return callback(new Error('手机号不能为空'))
@@ -158,12 +152,25 @@
       }
     }
   },
-    methods: {
-      handleClick(tab, event) {
-        console.log(tab, event);
-      }
+  methods: {
+    handleClick (tab, event) {
+      console.log(tab, event)
+    },
+    submitForm (formName) {
+      this.$refs[formName].validate((valid) => {
+        if (valid) {
+          alert('submit!')
+        } else {
+          console.log('error submit!!')
+          return false
+        }
+      })
+    },
+    resetForm (formName) {
+      this.$refs[formName].resetFields()
     }
-  };
+  }
+}
 </script>
 <style scoped>
 .register{
@@ -210,7 +217,7 @@
   text-align: center;
   color: white;
 }
->>>.el-tabs__nav{
-  left: 600px;
-}
+/* .el-tabs__item{
+  padding: 0 55px;
+} */
 </style>

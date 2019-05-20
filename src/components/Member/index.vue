@@ -1,9 +1,9 @@
 <template>
   <div class="Member-Center">
       <div class="nav-top">
-            <a>主页</a>
-            <span> > </span>
-            <span>我的账户</span>
+          <a>主页</a>
+          <span> > </span>
+          <span>我的账户</span>
       </div>
       <div class="Member clearfix">
           <div class="Center-menu fl">
@@ -15,52 +15,33 @@
             </ul>
             <dl>
               <dt>个人中心</dt>
-              <dd>我的资料</dd>
-              <dd>修改密码</dd>
-              <dd>收货地址</dd>
-              <dd>增值税发票</dd>
-              <dd>我的电子卷</dd>
-              <dd>我的积分</dd>
+             <router-link  to="/Member/MyInformation"><dd>我的资料</dd></router-link>
+              <router-link  to="/Member/ChangePassword"><dd>修改密码</dd></router-link>
+              <router-link  to="/Member/ReceivingAddress"><dd>收货地址</dd></router-link>
             </dl>
-            <dl>
+            <dl class="margin-T-20">
               <dt>购物中心</dt>
               <dd>购物车</dd>
-              <dd>订单列表</dd>
-              <dd>收藏列表</dd>
+              <router-link  to="/Member/Collectionlist"><dd>订单列表</dd></router-link>
+              <router-link  to="/Member/Orderlist"><dd>收藏列表</dd></router-link>
             </dl>
           </div>
           <div class="Member-content fr">
-            <ul>
-              <dt><img src="./picture/icon1.gif">资料设置</dt>
-              <li>更新个人信息</li>
-              <li>修改密码</li>
-              <li>收货地址</li>
-              <li>增值税发票</li>
-            </ul>
-            <ul>
-              <dt><img src="./picture/icon2.gif">账户查询资</dt>
-              <li>我的电子卷</li>
-              <li>我的积分</li>
-            </ul>
-            <ul>
-              <dt><img src="./picture/icon3.gif">我的收藏</dt>
-              <li>我的收藏夹</li>
-            </ul>
-            <ul>
-              <dt><img src="./picture/icon4.gif">订单管理</dt>
-              <li>订单历史记录</li>
-            </ul>
+            <router-view></router-view>
+            <!-- <router-view></router-view> -->
           </div>
+          <span class="clear"></span>
       </div>
   </div>
 </template>
 <script>
 export default {}
 </script>
-<style>
+<style scoped>
 .Member-Center{
   width: 1200px;
   margin: auto;
+  background: #BCD3E5;
 }
 .nav-top{
   font-size: 14px;
@@ -74,6 +55,7 @@ export default {}
 }
 .Member-content{
   width: 1000px;
+  /* border: 1px solid #cccccc */
 }
 .fl{
   float: left;
@@ -96,29 +78,11 @@ export default {}
   font-size: 14px;
   line-height: 30px;
 }
-.Member-content ul{
-  width: 400px;
-  float: left;
-  margin: 30px;
-  height: 180px;
-}
-.Member-content ul li{
-  list-style: none;
-  width: 100%;
-  line-height: 30px;
-  font-size: 14px;
-}
 .Center-menu  dd{
   font-size: 14px;
   line-height: 30px;
-}
-.Member-content dt{
-  border-bottom: 1px solid #000000;
-  width: 160px;
-  vertical-align: middle;
-}
-.Member-content ul img{
-  vertical-align: middle;
-  padding-right: 20px;
+  margin-left: 40px;
+  color: #4f4f4f;
+  font-size: 12px;
 }
 </style>

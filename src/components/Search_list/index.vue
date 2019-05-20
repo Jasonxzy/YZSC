@@ -41,60 +41,60 @@
       <div class="line">
         <!--单件商品-->
         <div class="Products" id="1">
-          <a href="#" class="photo">
+          <router-link to="/purchase" class="photo">
             <img title="芝兰玉叶慕思蛋糕" alt="芝兰玉叶慕思蛋糕" src="./img/100000027_M.jpg" />
-          </a>
+          </router-link>
           <div class="ms">
             <h5>
-              <a href="#"> 芝兰玉叶慕思蛋糕35</a>
+              <router-link to="/purchase"> 芝兰玉叶慕思蛋糕35</router-link>
             </h5>
             <P>干酪慕思，布朗尼饼干底</P>
             <P class="spec">规格：78号、56号</P>
           </div>
            <strong class="price">￥145.00</strong>
-          <a href="#" class="btn_minxi">立即购买</a>
+          <router-link to="/purchase" class="btn_minxi">立即购买</router-link>
         </div>
         <div class="Products" id="2">
-          <a href="#" class="photo">
+          <router-link to="/purchase" class="photo">
             <img title="芝兰玉叶慕思蛋糕" alt="芝兰玉叶慕思蛋糕" src="./img/100000027_M.jpg" />
-          </a>
+          </router-link>
           <div class="ms">
             <h5>
-              <a href="#"> 芝兰玉叶慕思蛋糕54</a>
+              <router-link to="/purchase"> 芝兰玉叶慕思蛋糕54</router-link>
             </h5>
             <P>干酪慕思，布朗尼饼干底678</P>
             <P class="spec">规格：54号、65号</P>
           </div>
           <strong class="price">￥132.00</strong>
-          <a href="#" class="btn_minxi">立即购买</a>
+          <router-link to="/purchase" class="btn_minxi">立即购买</router-link>
         </div>
         <div class="Products" id="3">
-          <a href="#" class="photo">
+          <router-link to="/purchase" class="photo">
             <img title="芝兰玉叶慕思蛋糕" alt="芝兰玉叶慕思蛋糕" src="./img/100001442_M.jpg" />
-          </a>
+          </router-link>
           <div class="ms">
             <h5>
-              <a href="#"> 芝兰玉叶慕思蛋糕545</a>
+              <router-link to="/purchase"> 芝兰玉叶慕思蛋糕545</router-link>
             </h5>
             <P>干酪慕思，布朗尼饼干底88</P>
             <P class="spec">规格：585号、552号</P>
           </div>
           <strong class="price">￥173.00</strong>
-          <a href="#" class="btn_minxi">立即购买</a>
+          <router-link to="/purchase" class="btn_minxi">立即购买</router-link>
         </div>
         <div class="Products" id="4">
-          <a href="#" class="photo">
+          <router-link to="/purchase" class="photo">
             <img title="芝兰玉叶慕思蛋糕" alt="芝兰玉叶慕思蛋糕" src="./img/100001442_M.jpg" />
-          </a>
+          </router-link>
           <div class="ms">
             <h5>
-              <a href="#"> 芝兰玉叶慕思蛋糕75</a>
+              <router-link to="/purchase"> 芝兰玉叶慕思蛋糕75</router-link>
             </h5>
             <P>干酪慕思，布朗尼饼干底</P>
             <P class="spec">规格：45号、55号</P>
           </div>
           <strong class="price">￥125.00</strong>
-          <a href="#" class="btn_minxi">立即购买</a>
+          <router-link to="/purchase" class="btn_minxi">立即购买</router-link>
         </div>
         <!--商品分页-->
         <div class="block">
@@ -117,16 +117,16 @@
         <h4 class="redTitle">猜你喜欢</h4>
         <ul class="likeProductList">
           <li>
-            <a href="#">
+            <router-link to="/purchase">
               <img src="./img/100000027_M.jpg" alt="甜蜜如心鲜奶蛋糕"/>
-            </a>
+            </router-link>
             <em>¥258.00</em>
             <strong> 甜蜜如心鲜奶蛋糕</strong>
           </li>
           <li>
-            <a href="#">
+            <router-link to="/purchase">
               <img src="./img/100000027_M.jpg" alt="甜蜜如心鲜奶蛋糕"/>
-            </a>
+            </router-link>
             <em>¥258.00</em>
             <strong> 甜蜜如心鲜奶蛋糕</strong>
           </li>
