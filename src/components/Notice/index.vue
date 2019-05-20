@@ -3,9 +3,9 @@
     <!--元祖公告一-（刘璐-->
     <!--元祖公告导航-->
     <div class="Notice-head">
-      <a href="#" class="gray fonts-14">主页</a>
+      <router-link to="/#" class="gray fonts-14">主页</router-link>
       >
-      <a href="#" class="gray fonts-14"> 元祖公告44（18年中秋月饼销毁公告）</a>
+      <router-link to="#" class="gray fonts-14"> 元祖公告44（18年中秋月饼销毁公告）</router-link>
     </div>
     <div class="Notice-cotainer">
       <div class="Notice-logo">
@@ -38,7 +38,16 @@
   </div>
 </template>
 <script>
+<<<<<<< HEAD
 export default {}
+=======
+export default {
+  // 文档加载完成
+  mounted () {
+    console.log(this.$route.params.id)
+  }
+}
+>>>>>>> 5840b5ab6286a839bb7f387f5b2a235ce798e9a7
 </script>
 <style scoped>
   /*导航*/

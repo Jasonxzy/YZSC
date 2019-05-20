@@ -2,9 +2,9 @@
   <!--品牌故事-刘璐-->
   <div class="allcolor brand">
      <div class="brand-head">
-       <a href="#" class="gray fonts-14">主页</a>
+       <router-link to="/#" class="gray fonts-14">主页</router-link>
        >
-       <a href="#" class="gray fonts-14">品牌故事</a>
+       <router-link to="#" class="gray fonts-14">品牌故事</router-link>
      </div>
      <div class="brang-img">
         <img src="./brandimg/solagen_r1_c2.gif" alt="">

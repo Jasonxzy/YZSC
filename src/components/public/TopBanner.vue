@@ -28,9 +28,9 @@ export default {
     width: 1200px;
     margin: 0 auto;
   }
-  .el-carousel__container {
-    position: relative;
-    height: 90px;
-    width: 100%;
-  }
+  /*.el-carousel__container {*/
+    /*position: relative;*/
+    /*height: 90px;*/
+    /*width: 100%;*/
+  /*}*/
 </style>

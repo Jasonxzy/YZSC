@@ -6,13 +6,16 @@ import register from '@/components/sign/register.vue'
 import password from '@/components/sign/login.vue'
 import Member from '@/components/Member/index.vue'// 会员中心公共组件
 import purchase from '@/components/purchase/index.vue'
+import ShoppingCart from '@/components/ShoppingCart/index.vue'
 import BrandStory from '@/components/BrandStory/index.vue'// 品牌故事
 import TopNavigation from '@/components/public/TopNavigation.vue' // 顶部
 import TopBanner from '@/components/public/TopBanner.vue' // 顶部导航
 import search from '@/components/public/search.vue' // 搜索
 import ClassNav from '@/components/public/ClassNav.vue' // banner导航
+import HelpCenter from '@/components/HelpCenter/index.vue' // 帮助中心
 import Notice from '@/components/Notice/index.vue'
 import BottomNav from '@/components/public/BottomNavigation.vue' // 公共底部
+<<<<<<< HEAD
 import ReceivingAddress from '@/components/ReceivingAddress/index.vue'// 添加地址
 import ChangePassword from '@/components/ChangePassword/index.vue'// 修改密码
 import MyInformation from '@/components/MyInformation/index.vue'
@@ -20,6 +23,10 @@ import Personal from '@/components/Member/Member.vue'
 import Collectionlist from '@/components/Collectionlist/index.vue' // 收藏列表
 import Orderlist from '@/components/Orderlist/index.vue' // 订单列表
 import details from '@/components/Orderlist/details.vue'// 订单详情
+=======
+import SearchList from '@/components/Search_list/index.vue' // 列表页
+import Agreement from '@/components/Agreement/index.vue' // 注册协议
+>>>>>>> 5840b5ab6286a839bb7f387f5b2a235ce798e9a7
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -33,6 +40,7 @@ export default new Router({
       path: '/login',
       components: {
         default: login
+<<<<<<< HEAD
       },
       children: [{
         path: '',
@@ -54,12 +62,15 @@ export default new Router({
       path: '/password',
       components: {
         default: password
+=======
+>>>>>>> 5840b5ab6286a839bb7f387f5b2a235ce798e9a7
       }
     },
     {
       path: '/Member',
       components: {
         default: Member
+<<<<<<< HEAD
       },
       children: [{
         path: '',
@@ -92,6 +103,8 @@ export default new Router({
       {
         path: 'details',
         components: details
+=======
+>>>>>>> 5840b5ab6286a839bb7f387f5b2a235ce798e9a7
       }
     ]
     },
@@ -99,6 +112,14 @@ export default new Router({
       path: '/purchase',
       components: {
         default: purchase
+<<<<<<< HEAD
+=======
+      }
+    }, {
+      path: '/ShoppingCart',
+      components: {
+        default: ShoppingCart
+>>>>>>> 5840b5ab6286a839bb7f387f5b2a235ce798e9a7
       }
     },
     {
@@ -135,11 +156,31 @@ export default new Router({
       path: '/BrandStory',
       components: {
         default: BrandStory
+<<<<<<< HEAD
+=======
       }
     },
     {
-      path: '/Notice',
+      path: '/Notice/:id',
       components: {
+        default: Notice
+>>>>>>> 5840b5ab6286a839bb7f387f5b2a235ce798e9a7
+      }
+    },
+    {
+      path: '/SearchList',
+      components: {
+        default: SearchList
+      }
+    },
+    {
+      path: '/HelpCenter',
+      component: HelpCenter
+    },
+    {
+      path: '/Agreement',
+      components: {
+<<<<<<< HEAD
         default: Notice
       }
     },
@@ -159,6 +200,9 @@ export default new Router({
       path: '/MyInformation', // 我的资料
       components: {
         default: MyInformation
+=======
+        default: Agreement
+>>>>>>> 5840b5ab6286a839bb7f387f5b2a235ce798e9a7
       }
     }
   ]
