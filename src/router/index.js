@@ -15,7 +15,6 @@ import ClassNav from '@/components/public/ClassNav.vue' // banner导航
 import HelpCenter from '@/components/HelpCenter/index.vue' // 帮助中心
 import Notice from '@/components/Notice/index.vue'
 import BottomNav from '@/components/public/BottomNavigation.vue' // 公共底部
-<<<<<<< HEAD
 import ReceivingAddress from '@/components/ReceivingAddress/index.vue'// 添加地址
 import ChangePassword from '@/components/ChangePassword/index.vue'// 修改密码
 import MyInformation from '@/components/MyInformation/index.vue'
@@ -23,10 +22,10 @@ import Personal from '@/components/Member/Member.vue'
 import Collectionlist from '@/components/Collectionlist/index.vue' // 收藏列表
 import Orderlist from '@/components/Orderlist/index.vue' // 订单列表
 import details from '@/components/Orderlist/details.vue'// 订单详情
-=======
 import SearchList from '@/components/Search_list/index.vue' // 列表页
 import Agreement from '@/components/Agreement/index.vue' // 注册协议
->>>>>>> 5840b5ab6286a839bb7f387f5b2a235ce798e9a7
+import clickAddress from '@/components/ReceivingAddress/address.vue' // 点击添加地址
+import City from '@/components/ReceivingAddress/City.vue' //选择地区
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -40,7 +39,6 @@ export default new Router({
       path: '/login',
       components: {
         default: login
-<<<<<<< HEAD
       },
       children: [{
         path: '',
@@ -62,15 +60,12 @@ export default new Router({
       path: '/password',
       components: {
         default: password
-=======
->>>>>>> 5840b5ab6286a839bb7f387f5b2a235ce798e9a7
       }
     },
     {
       path: '/Member',
       components: {
         default: Member
-<<<<<<< HEAD
       },
       children: [{
         path: '',
@@ -97,14 +92,16 @@ export default new Router({
         component: details
       },
       {
+        path: '/ReceivingAddress/:id',
+        component: clickAddress
+      },
+      {
         path: 'Orderlist',
         component: Orderlist
       },
       {
         path: 'details',
         components: details
-=======
->>>>>>> 5840b5ab6286a839bb7f387f5b2a235ce798e9a7
       }
     ]
     },
@@ -112,14 +109,12 @@ export default new Router({
       path: '/purchase',
       components: {
         default: purchase
-<<<<<<< HEAD
-=======
       }
-    }, {
+    }, 
+    {
       path: '/ShoppingCart',
       components: {
         default: ShoppingCart
->>>>>>> 5840b5ab6286a839bb7f387f5b2a235ce798e9a7
       }
     },
     {
@@ -156,15 +151,12 @@ export default new Router({
       path: '/BrandStory',
       components: {
         default: BrandStory
-<<<<<<< HEAD
-=======
       }
     },
     {
       path: '/Notice/:id',
       components: {
         default: Notice
->>>>>>> 5840b5ab6286a839bb7f387f5b2a235ce798e9a7
       }
     },
     {
@@ -180,7 +172,6 @@ export default new Router({
     {
       path: '/Agreement',
       components: {
-<<<<<<< HEAD
         default: Notice
       }
     },
@@ -199,10 +190,14 @@ export default new Router({
     {
       path: '/MyInformation', // 我的资料
       components: {
-        default: MyInformation
-=======
+        default: MyInformation,
         default: Agreement
->>>>>>> 5840b5ab6286a839bb7f387f5b2a235ce798e9a7
+      }
+    },
+    {
+      path: '/cl', // 我的资料
+      components: {
+        default: City,
       }
     }
   ]

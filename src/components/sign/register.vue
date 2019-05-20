@@ -184,11 +184,11 @@ export default {
 .el-tabs__nav{
   left: 540px;
 }
-.automatic{
+.a-phone{
   font-size: 14px;
   margin-bottom: 20px;
   vertical-align: middle;
-  margin-left: 58px;
+  margin-left: 100px;
 }
 .automatic input{
   vertical-align: middle;
@@ -217,6 +217,7 @@ export default {
   text-align: center;
   color: white;
 }
+
 /* .el-tabs__item{
   padding: 0 55px;
 } */

@@ -166,13 +166,6 @@
   </div>
 </template>
 <script>
-<<<<<<< HEAD
-export default {
-//    data:{
-//    cur:0
-//   }
-}
-=======
   import img1 from "../public/img/100000027_M.jpg"
   import img2 from "../public/img/100001236_M.jpg"
   import img3 from "../public/img/100001239_M.jpg"
@@ -196,15 +189,12 @@ export default {
     methods: {
       handleClick (tab, event) {
         console.log(tab, event)
-      }
-    },
-    methods: {
+      },
       son (item, idx) {
         this.index = idx;
       }
     }
   }
->>>>>>> 5840b5ab6286a839bb7f387f5b2a235ce798e9a7
 </script>
 <style lang="less"  scoped>
 

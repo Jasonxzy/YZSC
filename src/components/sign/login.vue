@@ -89,13 +89,16 @@ export default {
 }
 .el-button{
   width: 303px;
-  margin-left: -20px;
+  margin-left: -4px;
 }
 .automatic{
   font-size: 14px;
   margin-bottom: 20px;
   vertical-align: middle;
-  margin-left: 58px;
+  margin-left: 100px;
+}
+.a-phone{
+  margin-top:100px;
 }
 .automatic input{
   vertical-align: middle;

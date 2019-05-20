@@ -57,6 +57,7 @@ export default {
   width: 900px;
   margin: auto;
   border-bottom:1px solid #cccccc;
+  margin-top: 30PX;
 }
 .Collectionlist-box span{
   font-weight: bold;

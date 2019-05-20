@@ -1,4 +1,12 @@
 <template>
+<div>
+   <TopNavigation/>
+    <!--导航banner-->
+    <TopBanner/>
+    <!--搜索部分-->
+    <search/>
+    <!--分类导航部分-->
+    <ClassNav/>
   <div class="Member-Center">
       <div class="nav-top">
           <a>主页</a>
@@ -20,8 +28,7 @@
               <router-link  to="/Member/ReceivingAddress"><dd>收货地址</dd></router-link>
             </dl>
             <dl class="margin-T-20">
-              <dt>购物中心</dt>
-              <dd>购物车</dd>
+              <router-link  to="/ShoppingCart"><dd>购物车</dd></router-link>
               <router-link  to="/Member/Collectionlist"><dd>订单列表</dd></router-link>
               <router-link  to="/Member/Orderlist"><dd>收藏列表</dd></router-link>
             </dl>
@@ -33,15 +40,32 @@
           <span class="clear"></span>
       </div>
   </div>
+  <BottomNav/>
+</div>
 </template>
 <script>
-export default {}
+import BottomNav from '../public/BottomNavigation.vue'
+import TopNavigation from '../public/TopNavigation.vue'
+import TopBanner from '../public/TopBanner.vue'
+import search from '../public/search.vue'
+import ClassNav from '../public/ClassNav.vue'
+export default {
+  components: {
+    BottomNav,
+    ClassNav,
+    search,
+    TopBanner,
+    TopNavigation
+  }
+}
 </script>
 <style scoped>
+html,body{ overflow-y:scroll;} 
+html,body{ overflow:scroll; min-height:101%;} 
+html{ overflow:-moz-scrollbars-vertical;} 
 .Member-Center{
   width: 1200px;
   margin: auto;
-  background: #BCD3E5;
 }
 .nav-top{
   font-size: 14px;

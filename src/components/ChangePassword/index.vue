@@ -107,7 +107,7 @@ export default {
   width: 900px;
   margin: auto;
   border-bottom:1px solid #cccccc;
-  /* margin-top: 35px; */
+  margin-top: 30px;
 }
 .fr{
   float: right;
@@ -123,7 +123,8 @@ export default {
 }
 .Password-modify{
   width: 400px;
+  margin-left: 60px;
   margin: auto;
-  margin-top: 35px;
+  margin-top: 30px;
 }
 </style>

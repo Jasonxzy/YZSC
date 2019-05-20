@@ -38,16 +38,12 @@
   </div>
 </template>
 <script>
-<<<<<<< HEAD
-export default {}
-=======
 export default {
   // 文档加载完成
   mounted () {
     console.log(this.$route.params.id)
   }
 }
->>>>>>> 5840b5ab6286a839bb7f387f5b2a235ce798e9a7
 </script>
 <style scoped>
   /*导航*/

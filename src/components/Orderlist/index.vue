@@ -33,7 +33,7 @@
         </div>
         <span slot="footer" class="dialog-footer">
           <el-button @click="dialogVisible = false">取 消</el-button>
-          <el-button type="primary" @click="dialogVisible = false">结算</el-button>
+          <el-button type="primary" @click="dialogVisible = false"><router-link to="/ShoppingCart">结算</router-link></el-button>
         </span>
       </el-dialog>
     </div>

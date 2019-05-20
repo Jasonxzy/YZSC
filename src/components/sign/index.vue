@@ -1,4 +1,9 @@
 <template>
+<div>
+  <TopNavigation/>
+  <TopBanner/>
+  <search/>
+  <ClassNav/>
   <el-tabs v-model="activeName" @tab-click="handleClick">
     <el-tab-pane label="登录" name="first">
       <router-view></router-view>
@@ -39,10 +44,17 @@
     </div>
     </el-tab-pane>
   </el-tabs>
+  <BottomNav/>
+</div>
 </template>
 <script>
-  export default {
-    data () {
+import BottomNav from '../public/BottomNavigation.vue'
+import TopNavigation from '../public/TopNavigation.vue'
+import TopBanner from '../public/TopBanner.vue'
+import search from '../public/search.vue'
+import ClassNav from '../public/ClassNav.vue'
+export default {
+  data () {
     var phone = (rule, value, callback) => {
       if (!value) {
         return callback(new Error('手机号不能为空'))
@@ -158,30 +170,51 @@
       }
     }
   },
-    methods: {
-      handleClick(tab, event) {
-        console.log(tab, event);
-      }
+  methods: {
+    handleClick (tab, event) {
+      console.log(tab, event)
+    },
+    submitForm (formName) {
+      this.$refs[formName].validate((valid) => {
+        if (valid) {
+          alert('submit!')
+        } else {
+          console.log('error submit!!')
+          return false
+        }
+      })
+    },
+    resetForm (formName) {
+      this.$refs[formName].resetFields()
     }
-  };
+  },
+  components: {
+    BottomNav,
+    ClassNav,
+    search,
+    TopBanner,
+    TopNavigation
+
+  }
+}
 </script>
 <style scoped>
 .register{
   width: 403px;
   margin: auto;
 }
-.el-button{
+>>>.el-button{
   width: 303px;
-  margin-left: -20px;
+  margin-left: -4px;
 }
-.el-tabs__nav{
+>>>.el-tabs__nav{
   left: 540px;
 }
 .automatic{
   font-size: 14px;
   margin-bottom: 20px;
   vertical-align: middle;
-  margin-left: 58px;
+  margin-left: 100px;
 }
 .automatic input{
   vertical-align: middle;
@@ -197,7 +230,7 @@
    content: " ";
    display:inline-block;
 }
-.el-input-phone{
+>>>.el-input-phone{
   width: 70%;
 }
 .a-phone{
@@ -209,6 +242,7 @@
   display: inline-block;
   text-align: center;
   color: white;
+  margin-top: 3px;
 }
 >>>.el-tabs__nav{
   left: 600px;

@@ -37,7 +37,7 @@ export default {
   width: 900px;
   margin: auto;
   border-bottom:1px solid #cccccc;
-  /* margin-top: 35px; */
+  margin-top: 30px;
 }
 .fr{
   float: right;
