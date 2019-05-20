@@ -65,7 +65,6 @@
             </div>
           </li></ul>
           <button class="buy fonts-20 float-l red2 buypinkred">立即购买</button>
-          <!--<button class="join fonts-20 float-l white joinred">加入购物车</button>-->
               <button class="join fonts-20 float-l white joinred">
                 <el-popover ref="popover2" placement="top-start" title="成功加入购物车" width="200" trigger="click"
                   content="">
