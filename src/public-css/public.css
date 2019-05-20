@@ -11,6 +11,12 @@ li {
 a {
   text-decoration: none;
 }
+.displayn {
+  display: none;
+}
+.displayb {
+  display: block;
+}
 .float-l {
   float: left;
 }

@@ -1,9 +1,9 @@
 <template>
   <div class="content allcolor">
     <div class="help-center-a allcolor padding-T-10 fonts-12">
-      <router-link to="#" class="gray">主页</router-link>
+      <router-link to="/#" class="gray">主页</router-link>
       >
-      <router-link to="#" class="gray">品牌故事</router-link>
+      <router-link to="/BrandStory" class="gray">品牌故事</router-link>
     </div>
     <div class="help-center-hc">
       <h1 class="help-center-h1 help-center-red">帮助中心</h1>

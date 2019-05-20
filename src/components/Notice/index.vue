@@ -3,7 +3,7 @@
     <!--元祖公告一-（刘璐-->
     <!--元祖公告导航-->
     <div class="Notice-head">
-      <router-link to="#" class="gray fonts-14">主页</router-link>
+      <router-link to="/#" class="gray fonts-14">主页</router-link>
       >
       <router-link to="#" class="gray fonts-14"> 元祖公告44（18年中秋月饼销毁公告）</router-link>
     </div>

@@ -2,7 +2,7 @@
   <!--品牌故事-刘璐-->
   <div class="allcolor brand">
      <div class="brand-head">
-       <router-link to="#" class="gray fonts-14">主页</router-link>
+       <router-link to="/#" class="gray fonts-14">主页</router-link>
        >
        <router-link to="#" class="gray fonts-14">品牌故事</router-link>
      </div>

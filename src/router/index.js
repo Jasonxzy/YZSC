@@ -96,9 +96,7 @@ export default new Router({
     },
     {
       path: '/HelpCenter',
-      component: {
-        default: HelpCenter
-      }
+      component: HelpCenter
     },
     {
       path: '/Agreement',
