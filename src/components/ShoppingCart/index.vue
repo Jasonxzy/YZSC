@@ -319,7 +319,7 @@
 <style lang="less"  scoped>
   /*购物车*/
   .display{
-    display: none;
+    /*display: none;*/
     .Cartop{
       width: 1199px;
       height: 45px;
@@ -883,6 +883,7 @@
   }
   /*提交成功*/
   .display3{
+    display: none;
     .Cartop{
       width: 1199px;
       height: 45px;

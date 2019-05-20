@@ -1,8 +1,12 @@
 <template>
   <!--品牌故事-刘璐-->
   <div class="allcolor brand">
+    <TopNavigation/>
+    <TopBanner/>
+    <search/>
+    <ClassNav/>
      <div class="brand-head">
-       <router-link to="#" class="gray fonts-14">主页</router-link>
+       <router-link to="/#" class="gray fonts-14">主页</router-link>
        >
        <router-link to="#" class="gray fonts-14">品牌故事</router-link>
      </div>
@@ -59,10 +63,24 @@
       </div>
       <img src="./brandimg/solagen_r9_c1.gif" alt="">
     </div>
+    <BottomNav/>
   </div>
 </template>
 <script>
-
+import TopNavigation from '@/components/public/TopNavigation.vue'
+import TopBanner from '@/components/public/TopBanner.vue'
+import search from '@/components/public/search.vue'
+import ClassNav from '@/components/public/ClassNav.vue'
+import BottomNav from '@/components/public/BottomNavigation.vue'
+export default {
+  components: {
+    TopNavigation,
+    TopBanner,
+    search,
+    ClassNav,
+    BottomNav
+  }
+}
 </script>
 <style lang="less" scoped>
   .brand{

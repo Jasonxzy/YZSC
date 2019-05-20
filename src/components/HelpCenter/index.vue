@@ -1,9 +1,13 @@
 <template>
   <div class="content allcolor">
+    <TopNavigation/>
+    <TopBanner/>
+    <search/>
+    <ClassNav/>
     <div class="help-center-a allcolor padding-T-10 fonts-12">
-      <router-link to="#" class="gray">主页</router-link>
+      <router-link to="/#" class="gray">主页</router-link>
       >
-      <router-link to="#" class="gray">品牌故事</router-link>
+      <router-link to="/BrandStory" class="gray">品牌故事</router-link>
     </div>
     <div class="help-center-hc">
       <h1 class="help-center-h1 help-center-red">帮助中心</h1>
@@ -305,10 +309,23 @@
         </el-tab-pane>
       </el-tabs>
     </div>
+    <BottomNav/>
   </div>
 </template>
 <script>
+import TopNavigation from '@/components/public/TopNavigation.vue' // 顶部
+import TopBanner from '@/components/public/TopBanner.vue' // 顶部导航
+import search from '@/components/public/search.vue' // 搜索
+import ClassNav from '@/components/public/ClassNav.vue' // banner导航
+import BottomNav from '@/components/public/BottomNavigation.vue' // 公共底部
 export default {
+  components: {
+    TopNavigation,
+    TopBanner,
+    search,
+    ClassNav,
+    BottomNav
+  },
   data () {
     return {
       tabPosition: 'left'
@@ -316,12 +333,15 @@ export default {
   }
 }
 </script>
-<style>
+<style scoped>
   /*导航样式*/
   .help-center-a{
     width: 1199px;
     height: 45px;
     margin: 0 auto;
+  }
+  /deep/.el-tabs__active-bar .is-left{
+    background-color: transparent!important;
   }
   /*内容部分*/
   .content{
@@ -346,31 +366,31 @@ export default {
     padding-bottom: 5px;
   }
   .tab-height{
-    height: 1000px;
+    height: 970px;
   }
-  .el-tabs--left .el-tabs__nav-wrap.is-left::after, .el-tabs--left .el-tabs__nav-wrap.is-right::after, .el-tabs--right .el-tabs__nav-wrap.is-left::after, .el-tabs--right .el-tabs__nav-wrap.is-right::after {
+  /deep/.el-tabs--left .el-tabs__nav-wrap.is-left::after, .el-tabs--left .el-tabs__nav-wrap.is-right::after, .el-tabs--right .el-tabs__nav-wrap.is-left::after, .el-tabs--right .el-tabs__nav-wrap.is-right::after {
     height: 100%;
     width: 1px;
     bottom: auto;
     top: 0;
   }
-  .el-tabs--left .el-tabs__item.is-left {
+  /deep/.el-tabs--left .el-tabs__item.is-left {
    text-align: left;
-    border-bottom: 1px dashed gainsboro;
+    border-bottom: 1px dotted gainsboro;
   }
-  .el-tabs__item.is-active {
+  /deep/.el-tabs__item.is-active {
     color: #e9004f;
     background-color: #f1ebf6;
   }
-  .el-tabs__item:hover {
+  /deep/.el-tabs__item:hover {
     color: #e9004f;
     background-color: #f1ebf6;
     cursor: pointer;
   }
-  .el-tabs__active-bar{
+  /deep/.el-tabs__active-bar{
     background-color: transparent;
   }
-  .el-tabs__content {
+  /deep/.el-tabs__content {
     overflow: hidden;
     position: relative;
     padding-left: 30px;
@@ -423,12 +443,24 @@ export default {
   }
   /*发票信息说明*/
   .help-center-scorll{
-    height: 1000px;
+    height: 970px;
     overflow-y: scroll;
   }
   /*电子券购买*/
   .help-center-tp1{
     text-align: left;
     margin-left: 20px;
+  }
+  >>>.el-tabs__item:hover {
+    background-color: #f1ebf6;
+    color: #e9004f;
+    cursor: pointer;
+  }
+  >>>.el-tabs__active-bar{
+    background-color: transparent;
+  }
+  >>>.el-tabs__item.is-active {
+    color: #e9004f;
+    background-color: #f1ebf6;
   }
 </style>
