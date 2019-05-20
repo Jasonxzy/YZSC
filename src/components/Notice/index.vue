@@ -1,5 +1,9 @@
 <template>
-  <div class="Notice allcolor">
+   <div class="Notice allcolor">
+     <TopNavigation/>
+     <TopBanner/>
+     <search/>
+     <ClassNav/>
     <!--元祖公告一-（刘璐-->
     <!--元祖公告导航-->
     <div class="Notice-head">
@@ -35,10 +39,23 @@
         </span>
       </div>
     </div>
+     <BottomNav/>
   </div>
 </template>
 <script>
+import TopNavigation from '@/components/public/TopNavigation.vue'
+import TopBanner from '@/components/public/TopBanner.vue'
+import search from '@/components/public/search.vue'
+import ClassNav from '@/components/public/ClassNav.vue'
+import BottomNav from '@/components/public/BottomNavigation.vue'
 export default {
+  components: {
+    TopNavigation,
+    TopBanner,
+    search,
+    ClassNav,
+    BottomNav
+  },
   // 文档加载完成
   mounted () {
     console.log(this.$route.params.id)
