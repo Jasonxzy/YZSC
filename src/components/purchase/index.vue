@@ -22,10 +22,9 @@
           <div class="productleft float-l">
             <div class="shopimg">
               <vue-magnify
-                :previewImg="minImg"
-                :zoomImg="minImg">
+                :previewImg="min_img"
+                :zoomImg="min_img">
               </vue-magnify>
-              <!--<img src="" />-->
             </div>
             <div class="puchase-carousel padding-T-20">
               <div class="puchase-carousel-left float-l">
@@ -34,12 +33,13 @@
 
               <div class="puchase-carousel-content float-l">
                 <ul>
-                  <li><img src="http://pic.ganso.com.cn/images1/100000768/100000768_L.jpg" /> </li>
-                  <li><img src="http://pic.ganso.com.cn/images2/100000768/100000768_L.jpg" /> </li>
-                  <li><img src="http://pic.ganso.com.cn/images3/100000768/100000768_L.jpg" /> </li>
+                  <li @mouseenter="lev(i,index)" v-for="(i,index) in imgList">
+                    <img :src="i.img" />
+                  </li>
                 </ul>
               </div>
-              <div class="puchase-carousel-right float-r"> <img src="http://mall.ganso.com.cn/_ui/hepimages/right.gif" /> </div>
+              <div class="puchase-carousel-right float-r">
+                <img src="http://mall.ganso.com.cn/_ui/hepimages/right.gif" /> </div>
             </div>
           </div>
           <!--商品信息-->
@@ -54,9 +54,9 @@
               <div class="fonts-14 float-l">选择规格: </div>
               <div class="fonts-12 float-l choose">
                 <ul >
-                  <li class="liMenu"
-                      :class="idx==index?'hover':''" @click="son(item,idx)" v-for="(item,idx) in menu"
-                      :key="idx"><a href="#">{{item}}</a></li>
+                  <li @click="changeBorder1(index)" v-for="(i,index) in selectorList" id="ac">
+                    <a :class="{change:index == current2}" class=" a-hover-pink" href="javascript:void(0);">{{i.name}}</a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -65,9 +65,9 @@
           <ul><li>
             <el-input-number v-model="num8" controls-position="right" @change="handleChange"></el-input-number>
           </li></ul>
-          <button class="buy fonts-20 float-l buypinkred"><router-link to="">立即购买</router-link></button>
+          <button class="buy fonts-20 float-l buypinkred"><router-link to="./ShoppingCart">立即购买</router-link></button>
               <button class="join fonts-20 float-l white joinred">
-                <el-popover ref="popover2" placement="top-start" title="成功加入购物车" width="200" trigger="click"
+                <el-popover ref="popover2" placement="top-start" title="成功加入购物车" width="145" trigger="click"
                   content="">
                 </el-popover>
                 <el-button v-popover:popover2>加入购物车</el-button>
@@ -167,23 +167,44 @@
   import img1 from "../public/img/100000027_M.jpg"
   import img2 from "../public/img/100001236_M.jpg"
   import img3 from "../public/img/100001239_M.jpg"
+  import img4 from "../public/img/100000027_M.jpg"
+  import img5 from "../public/img/100001236_M.jpg"
+  import img6 from "../public/img/100001239_M.jpg"
+  import iagms1 from "./img/100000805_1.jpg"
+  import iagms2 from "./img/100000805_L.jpg"
+  import iagms3 from "./img/100000805_L2.jpg"
   export default {
     name: "guessLike",
     data () {
       return {
 //        handleMove: true,
-        minImg:"http://pic.ganso.com.cn/images1/100000769/100000769_L.jpg",
+        imgList: [
+          {img:iagms1},
+          {img:iagms2},
+          {img:iagms3}
+        ],
+        min_img: img1,
+        minImg: img6,
         num8:1,
         dialogVisible: false,
         activeName: 'first',
         value1: null,
         value2: null,
+        current2: 0,
         menu: ['蓝莓味', '草莓味', '芒果味'],
         index: 0,
         list: [
           {name: "甜蜜如心鲜奶蛋糕", img: img1, monery: "258.00"},
           {name: "朵朵咖啡鲜奶蛋糕", img: img2, monery: "268.00"},
-          {name: "8号桃花扇鲜奶蛋糕", img: img3, monery: "278.00"}
+          {name: "8号桃花扇鲜奶蛋糕", img: img3, monery: "278.00"},
+          {name: "甜蜜如心鲜奶蛋糕", img: img4, monery: "258.00"},
+          {name: "朵朵咖啡鲜奶蛋糕", img: img5, monery: "268.00"},
+          {name: "8号桃花扇鲜奶蛋糕", img: img6, monery: "278.00"}
+        ],
+        selectorList:[
+          {name: "款式1"},
+          {name: "款式2"},
+          {name: "款式3"},
         ]
       }
     },
@@ -216,12 +237,26 @@
         fontw.style.display = "none"
         rr.style.display = "none"
         aa.style.display = "block"
+      },
+      lev:function (i,index) {
+        this.curren = index
+        this.min_img = i.img
+      },
+      changeBorder1:function (index) {
+        this.current2 = index
+        console.log(this.current2)
+
       }
     }
 }
 </script>
 <style lang="less"  scoped>
-
+  .change{
+    width: 100%!important;
+    height: 100%!important;
+    border: 2px solid red!important;
+    color: #E93D6D;
+  }
   a {
     color: #4F4F4F;
   }
@@ -256,7 +291,7 @@
             }
           }
           .puchase-carousel {
-            width: 477px;
+            width: 415px;
             height: 69px;
             .puchase-carousel-left {
               width: 17px;
@@ -264,7 +299,7 @@
               margin: 0 10px;
             }
             .puchase-carousel-content {
-              width: 420px;
+              width: 360px;
               position: relative;
               overflow: hidden;
               display: inline;
@@ -278,7 +313,11 @@
                     width: 62px;
                     height: 62px;
                     padding: 1px;
+                    &:hover{
+                      border: 1px solid #C7023A;
+                    }
                   }
+
                 }
               }
             }
@@ -324,9 +363,6 @@
                 box-sizing: content-box;
                 &:hover {
                   color: #E93D6D;
-                }
-                &:active {
-                  border:1px solid red
                 }
               }
 
@@ -564,6 +600,9 @@
             }
           }
         }
+      }
+      /deep/.vue-magnify .zoom-box[data-v-0443e94f]{
+        z-index:9999;
       }
     }
     .Maylove {

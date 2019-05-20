@@ -6,6 +6,7 @@ import register from '@/components/sign/register.vue'
 import password from '@/components/sign/login.vue'
 import Member from '@/components/Member/index.vue'// 会员中心公共组件
 import ShoppingCart from '@/components/ShoppingCart/index.vue'
+import purchase from '@/components/purchase/index.vue'
 import BrandStory from '@/components/BrandStory/index.vue'// 品牌故事
 import TopNavigation from '@/components/public/TopNavigation.vue' // 顶部
 import TopBanner from '@/components/public/TopBanner.vue' // 顶部导航
@@ -13,7 +14,6 @@ import search from '@/components/public/search.vue' // 搜索
 import ClassNav from '@/components/public/ClassNav.vue' // banner导航
 import HelpCenter from '@/components/HelpCenter/index.vue' // 帮助中心
 import Notice from '@/components/Notice/index.vue'
-import purchase from '@/components/purchase/index.vue'
 import BottomNav from '@/components/public/BottomNavigation.vue' // 公共底部
 import ReceivingAddress from '@/components/ReceivingAddress/index.vue'// 添加地址
 import ChangePassword from '@/components/ChangePassword/index.vue'// 修改密码
@@ -49,9 +49,9 @@ export default new Router({
       ]
     },
     {
-      path: '/register',
+      path: '/purchase',
       components: {
-        default: register
+        default: purchase
       }
     },
     {
