@@ -6,9 +6,9 @@
     <search/>
     <ClassNav/>
      <div class="brand-head">
-       <router-link to="/#" class="gray fonts-14">主页</router-link>
+       <router-link to="/#" class="gray fonts-12">主页</router-link>
        >
-       <router-link to="#" class="gray fonts-14">品牌故事</router-link>
+       <router-link to="#" class="gray fonts-12">品牌故事</router-link>
      </div>
      <div class="brang-img">
         <img src="./brandimg/solagen_r1_c2.gif" alt="">
@@ -90,7 +90,7 @@ export default {
   .brand-head{
     width: 1199px;
     height: 45px;
-    margin: 0 auto;
+    margin: 10px auto;
   }
   .brand img{
     width: 1128px;

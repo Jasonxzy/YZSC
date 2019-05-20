@@ -338,7 +338,7 @@ export default {
   .help-center-a{
     width: 1199px;
     height: 45px;
-    margin: 0 auto;
+    margin: 10px auto;
   }
   /deep/.el-tabs__active-bar .is-left{
     background-color: transparent!important;
