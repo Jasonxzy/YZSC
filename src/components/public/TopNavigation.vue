@@ -16,13 +16,17 @@
       </div>
       <!--官方微博-->
       <div class="weibo">
+        <a href="http://weibo.com/gansofood">
         <img src="./img/icon_sina.png"/>
         <span>官方微博</span>
+        </a>
       </div>
       <!--台湾元祖-->
       <div class="tw">
+        <a href="http://www.ganso.com.tw/">
         <img src="./img/icon_tw.png"/>
         <span>台湾元祖</span>
+        </a>
       </div>
     </div>
     <div class="userbar">
