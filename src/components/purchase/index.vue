@@ -250,7 +250,7 @@ export default {
       rr.style.display = "block"
       disn.style.display = "none"
     },
-<<<<<<< HEAD
+  },
     methods: {
       handleClick (tab, event) {
         console.log(tab, event)
@@ -289,32 +289,9 @@ export default {
       changeBorder1:function (index) {
         this.current2 = index
         console.log(this.current2)
-=======
-    ee: function () {
-      let fontw = document.querySelector("#fontw")
-      let rr = document.querySelector("#rr")
-      let aa = document.querySelector("#aa")
-      let disn = document.querySelector("#disn")
-      disn.style.display = "block"
-      fontw.style.display = "none"
-      rr.style.display = "none"
-      aa.style.display = "block"
-    },
-    lev:function (i,index) {
-      this.curren = index
-      this.min_img = i.img
-    },
-    changeBorder1:function (index) {
-      this.current2 = index
-      console.log(this.current2)
->>>>>>> 86cdd0f34c0252ac8c5799fceb4df8043091f38e
-
     }
   }
-<<<<<<< HEAD
-=======
 }
->>>>>>> 86cdd0f34c0252ac8c5799fceb4df8043091f38e
 </script>
 <style lang="less"  scoped>
   .change{
