@@ -166,37 +166,35 @@
   </div>
 </template>
 <script>
-  import img1 from "../public/img/100000027_M.jpg"
-  import img2 from "../public/img/100001236_M.jpg"
-  import img3 from "../public/img/100001239_M.jpg"
-  export default {
-    name: "guessLike",
-    data () {
-      return {
-        dialogVisible: false,
-        activeName: 'first',
-        value1: null,
-        value2: null,
-        menu: ['蓝莓味', '草莓味', '芒果味'],
-        index: 0,
-        list: [
-          {name: "甜蜜如心鲜奶蛋糕", img: img1, monery: "258.00"},
-          {name: "朵朵咖啡鲜奶蛋糕", img: img2, monery: "268.00"},
-          {name: "8号桃花扇鲜奶蛋糕", img: img3, monery: "278.00"}
-        ]
-      }
+import img1 from '../public/img/100000027_M.jpg'
+import img2 from '../public/img/100001236_M.jpg'
+import img3 from '../public/img/100001239_M.jpg'
+export default {
+  name: 'guessLike',
+  data () {
+    return {
+      dialogVisible: false,
+      activeName: 'first',
+      value1: null,
+      value2: null,
+      menu: ['蓝莓味', '草莓味', '芒果味'],
+      index: 0,
+      list: [
+        {name: "甜蜜如心鲜奶蛋糕", img: img1, monery: "258.00"},
+        {name: "朵朵咖啡鲜奶蛋糕", img: img2, monery: "268.00"},
+        {name: "8号桃花扇鲜奶蛋糕", img: img3, monery: "278.00"}
+      ]
+    }
+  },
+  methods: {
+    handleClick (tab, event) {
+      console.log(tab, event)
     },
-    methods: {
-      handleClick (tab, event) {
-        console.log(tab, event)
-      }
-    },
-    methods: {
-      son (item, idx) {
-        this.index = idx;
-      }
+    son (item, idx) {
+      this.index = idx
     }
   }
+}
 </script>
 <style lang="less"  scoped>
 
