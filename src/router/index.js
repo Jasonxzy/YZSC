@@ -6,6 +6,7 @@ import register from '@/components/sign/register.vue'
 import password from '@/components/sign/login.vue'
 import Member from '@/components/Member/index.vue'// 会员中心公共组件
 import ShoppingCart from '@/components/ShoppingCart/index.vue'
+import purchase from '@/components/purchase/index.vue'
 import BrandStory from '@/components/BrandStory/index.vue'// 品牌故事
 import TopNavigation from '@/components/public/TopNavigation.vue' // 顶部
 import TopBanner from '@/components/public/TopBanner.vue' // 顶部导航
@@ -47,10 +48,11 @@ export default new Router({
       }
       ]
     },
+
     {
-      path: '/register',
+      path: '/purchase',
       components: {
-        default: register
+        default: purchase
       }
     },
     {

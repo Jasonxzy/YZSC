@@ -54,9 +54,6 @@
               <div class="fonts-14 float-l">选择规格: </div>
               <div class="fonts-12 float-l choose">
                 <ul >
-                  <!--<li class="liMenu"-->
-                      <!--:class="idx==index?'hover':''" @click="son(item,idx)" v-for="(item,idx) in menu"-->
-                      <!--:key="idx"><a href="#">{{item}}</a></li>-->
                   <li @click="changeBorder1(index)" v-for="(i,index) in selectorList" id="ac">
                     <a :class="{change:index == current2}" class=" a-hover-pink" href="javascript:void(0);">{{i.name}}</a>
                   </li>
