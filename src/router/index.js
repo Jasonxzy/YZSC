@@ -13,7 +13,8 @@ import ClassNav from '@/components/public/ClassNav.vue' // banner导航
 import HelpCenter from '@/components/HelpCenter/index.vue' // 帮助中心
 import Notice from '@/components/Notice/index.vue'
 import BottomNav from '@/components/public/BottomNavigation.vue' // 公共底部
-import SearchList from '@/components/Search_list/index.vue' // 公共底部
+import SearchList from '@/components/Search_list/index.vue' // 列表页
+import Agreement from '@/components/Agreement/index.vue' // 注册协议
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -42,8 +43,7 @@ export default new Router({
     }, {
       path: '/ShoppingCart',
       components: {
-        default: ShoppingCart,
-        ShoppingCart: ShoppingCart
+        default: ShoppingCart
       }
     },
     {
@@ -98,6 +98,12 @@ export default new Router({
       path: '/HelpCenter',
       component: {
         default: HelpCenter
+      }
+    },
+    {
+      path: '/Agreement',
+      components: {
+        default: Agreement
       }
     }
   ]

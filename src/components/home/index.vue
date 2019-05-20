@@ -702,4 +702,13 @@ export default {
     display: block;
   }
   /*竞选活动部分结束*/
+  .el-tabs__nav{
+    height: 60px;
+  }
+  .el-tabs__nav-wrap{
+    height: 60px;
+  }
+  #tab-first{
+    line-height: 60px;
+  }
 </style>
