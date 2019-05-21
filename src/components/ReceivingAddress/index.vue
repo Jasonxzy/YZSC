@@ -3,7 +3,7 @@
      <div class="address">
         <div class="Management clearfix">
           <span class="fl">管理你的收货地址</span>
-         <router-link  class="fr" to="/ReceivingAddress/lickAddress">添加地址</router-link>
+         <router-link to="/ReceivingAddress/lickAddress" class="fr">添加地址</router-link>
         </div>
      </div>
   </div>

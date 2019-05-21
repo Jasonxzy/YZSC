@@ -59,7 +59,7 @@
             <li class="hui_bg">
               <strong>
                 <span class="icon1 wizard4" style="background-position: 0px 0px;"></span>
-                <router-link href="#">精致西点</router-link>
+                <router-link to="#">精致西点</router-link>
               </strong>
               <router-link to="/SearchList">小慕思类</router-link>
               <router-link to="/SearchList">西点卷类</router-link>
@@ -69,7 +69,7 @@
             <li>
               <strong>
                 <span class="icon1 wizard5" style="background-position: 0px 0px;"></span>
-                <router-link href="#">元祖卡券</router-link>
+                <router-link to="#">元祖卡券</router-link>
               </strong>
               <router-link to="/SearchList">礼卡</router-link>
               <router-link to="/SearchList">水果券</router-link>

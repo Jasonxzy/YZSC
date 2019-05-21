@@ -11,18 +11,7 @@
               <el-input v-model="ruleForm.name" placeholder="收货人姓名"></el-input>
             </el-form-item>
             <el-form-item label="所在区域" >
-              <select>
-                <option>请选择</option>
-                <option>请选择5</option>
-              </select>
-              <select>
-                <option>请选择</option>
-                <option>请选择4</option>
-              </select>
-              <select>
-                <option>请选择</option>
-                <option>请选择1</option>
-              </select>
+              <City/>
             </el-form-item>
             <el-form-item prop="address" label="详细地址">
               <el-input v-model="ruleForm.address" placeholder="请输入你的详细地址"></el-input>
@@ -59,6 +48,7 @@
   </div>
 </template>
 <script>
+import City from '@/components/ReceivingAddress/City.vue'
 export default {
   data () {
    var address = (rule, value, callback) => {
@@ -172,6 +162,9 @@ export default {
     resetForm (formName) {
       this.$refs[formName].resetFields()
     }
+  },
+  components: {
+    City 
   }
 }
 </script>

@@ -1,58 +1,33 @@
 <template>
 <div>
-  <TopNavigation/>
-  <TopBanner/>
-  <search/>
-  <ClassNav/>
-  <el-tabs v-model="activeName" @tab-click="handleClick">
-    <el-tab-pane label="登录" name="first">
-      <router-view></router-view>
-    </el-tab-pane>
-    <el-tab-pane label="注册" name="second">
-        <div class="register">
-          <el-form :model="ruleForm" :rules="rules" ref="ruleForm" class="demo-ruleForm" label-width="100px">
-          <el-form-item prop="phone" label="手机">
-              <el-input v-model.number="ruleForm.phone" placeholder="请输入你登录的手机号"></el-input>
-          </el-form-item>
-          <el-form-item prop="email" label="邮箱">
-              <el-input v-model="ruleForm.email" placeholder="请输入你的邮箱"></el-input>
-          </el-form-item>
-          <el-form-item prop="picture" label="验证码">
-              <el-input v-model="ruleForm.picture" placeholder="请输入验证码" class="el-input-phone"></el-input>
-              <img>
-          </el-form-item>
-          <el-form-item prop="Shortmessage" label="短信验证">
-              <el-input v-model="ruleForm.Shortmessage" placeholder="请输入你的手机号" class="el-input-phone"></el-input><a class="a-phone fr">获取验证码</a>
-          </el-form-item>
-              <el-form-item prop="Recommender" label="推荐人">
-              <el-input v-model="ruleForm.Recommender" placeholder="请输入推荐人的手机号"></el-input>
-          </el-form-item>
-          <el-form-item  prop="pass"  label="密码">
-              <el-input type="password" v-model="ruleForm.pass" autocomplete="off" placeholder="请输入你的密码"></el-input>
-          </el-form-item>
-          <el-form-item  prop="checkPass" label=" 确认密码" >
-              <el-input type="password" v-model="ruleForm.checkPass" autocomplete="off" placeholder="请输入确认密码"></el-input>
-          </el-form-item>
-          <div class="automatic cleafx">
-              <input type="checkbox">同意注册协议
-              <router-link to="/Agreement" class="fr">注册协议</router-link>
-          </div>
+    <div class="nav-top">
+        <div class="nav-bottom">
+            忘记密码
+        </div>
+        <div class="nav-top-span">
+        <span>请输入您账户的电子邮件地址。我们将通过电子邮件向您发送更改密码的链接。。</span>
+        <span>标有星号 (*) 的字段是必填字段</span>
+        </div>
+    </div>
+    <div class="register">
+        <el-form :model="ruleForm" :rules="rules" ref="ruleForm" class="demo-ruleForm" label-width="100px">
+        <el-form-item prop="email" label="邮箱">
+            <el-input v-model="ruleForm.email" placeholder="请输入你的邮箱"></el-input>
+        </el-form-item>
+        <el-form-item prop="picture" label="验证码">
+            <el-input v-model="ruleForm.picture" placeholder="请输入验证码" class="el-input-phone"></el-input>
+            <span class="a-phone">
+                <img>
+            </span>
+        </el-form-item>
         <el-form-item>
-            <el-button type="primary" @click="submitForm('ruleForm')">提交</el-button>
+            <el-button type="primary" @click="submitForm('ruleForm')">找回密码</el-button>
         </el-form-item>
         </el-form>
     </div>
-    </el-tab-pane>
-  </el-tabs>
-  <BottomNav/>
 </div>
 </template>
 <script>
-import BottomNav from '../public/BottomNavigation.vue'
-import TopNavigation from '../public/TopNavigation.vue'
-import TopBanner from '../public/TopBanner.vue'
-import search from '../public/search.vue'
-import ClassNav from '../public/ClassNav.vue'
 export default {
   data () {
     var phone = (rule, value, callback) => {
@@ -187,34 +162,33 @@ export default {
     resetForm (formName) {
       this.$refs[formName].resetFields()
     }
-  },
-  components: {
-    BottomNav,
-    ClassNav,
-    search,
-    TopBanner,
-    TopNavigation
-
   }
 }
 </script>
 <style scoped>
 .register{
-  width: 403px;
+  width: 700px;
   margin: auto;
 }
->>>.el-button{
-  width: 303px;
-  margin-left: -4px;
+.el-button{
+  width: 200px;
+  margin-left: -20px;
 }
->>>.el-tabs__nav{
+.el-tabs__nav{
   left: 540px;
 }
-.automatic{
+.a-phone{
   font-size: 14px;
-  margin-bottom: 20px;
   vertical-align: middle;
-  margin-left: 100px;
+  background:#e93d6d;
+  display: inline-block;
+  width: 27%;
+  text-align: center;
+  border: 1px soli;
+  border-radius: 4px;
+  line-height: 38px;
+  color: white;
+  margin-left: 10px;
 }
 .automatic input{
   vertical-align: middle;
@@ -230,21 +204,26 @@ export default {
    content: " ";
    display:inline-block;
 }
->>>.el-input-phone{
+.el-input-phone{
   width: 70%;
-}
-.a-phone{
-  width: 27%;
-  border: 1px soli;
-  border-radius: 4px;
-  background:#409EFF;
-  line-height: 38px;
   display: inline-block;
-  text-align: center;
-  color: white;
-  margin-top: 3px;
 }
->>>.el-tabs__nav{
-  left: 600px;
+.nav-top{
+  margin-top: 20px;
+  font-size: 14px;
+  width: 700px;
+  margin: auto;
 }
+.nav-bottom{
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+ .nav-top-span{
+    display: inline-block;
+    margin-bottom: 14px;
+} 
+/* .el-tabs__item{
+  padding: 0 55px;
+} */
 </style>
