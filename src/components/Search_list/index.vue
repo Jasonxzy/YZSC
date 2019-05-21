@@ -40,60 +40,18 @@
       </el-menu>
       <div class="line">
         <!--单件商品-->
-        <div class="Products" id="1">
+        <div v-for="i in commodity" class="Products" :id="i.id">
           <router-link to="/purchase" class="photo">
-            <img title="芝兰玉叶慕思蛋糕" alt="芝兰玉叶慕思蛋糕" src="./img/100000027_M.jpg" />
+            <img :title="i.alt" :alt="i.alt" :src="i.img" />
           </router-link>
           <div class="ms">
             <h5>
-              <router-link to="/purchase"> 芝兰玉叶慕思蛋糕35</router-link>
+              <router-link to="/purchase">{{i.title}}</router-link>
             </h5>
-            <P>干酪慕思，布朗尼饼干底</P>
-            <P class="spec">规格：78号、56号</P>
+            <P>{{i.describe}}</P>
+            <P class="spec">规格：{{i.spe}}</P>
           </div>
-           <strong class="price">￥145.00</strong>
-          <router-link to="/purchase" class="btn_minxi">立即购买</router-link>
-        </div>
-        <div class="Products" id="2">
-          <router-link to="/purchase" class="photo">
-            <img title="芝兰玉叶慕思蛋糕" alt="芝兰玉叶慕思蛋糕" src="./img/100000027_M.jpg" />
-          </router-link>
-          <div class="ms">
-            <h5>
-              <router-link to="/purchase"> 芝兰玉叶慕思蛋糕54</router-link>
-            </h5>
-            <P>干酪慕思，布朗尼饼干底678</P>
-            <P class="spec">规格：54号、65号</P>
-          </div>
-          <strong class="price">￥132.00</strong>
-          <router-link to="/purchase" class="btn_minxi">立即购买</router-link>
-        </div>
-        <div class="Products" id="3">
-          <router-link to="/purchase" class="photo">
-            <img title="芝兰玉叶慕思蛋糕" alt="芝兰玉叶慕思蛋糕" src="./img/100001442_M.jpg" />
-          </router-link>
-          <div class="ms">
-            <h5>
-              <router-link to="/purchase"> 芝兰玉叶慕思蛋糕545</router-link>
-            </h5>
-            <P>干酪慕思，布朗尼饼干底88</P>
-            <P class="spec">规格：585号、552号</P>
-          </div>
-          <strong class="price">￥173.00</strong>
-          <router-link to="/purchase" class="btn_minxi">立即购买</router-link>
-        </div>
-        <div class="Products" id="4">
-          <router-link to="/purchase" class="photo">
-            <img title="芝兰玉叶慕思蛋糕" alt="芝兰玉叶慕思蛋糕" src="./img/100001442_M.jpg" />
-          </router-link>
-          <div class="ms">
-            <h5>
-              <router-link to="/purchase"> 芝兰玉叶慕思蛋糕75</router-link>
-            </h5>
-            <P>干酪慕思，布朗尼饼干底</P>
-            <P class="spec">规格：45号、55号</P>
-          </div>
-          <strong class="price">￥125.00</strong>
+           <strong class="price">￥{{i.Price}}</strong>
           <router-link to="/purchase" class="btn_minxi">立即购买</router-link>
         </div>
         <!--商品分页-->
@@ -116,19 +74,12 @@
       <div class="yCmsContentSlot">
         <h4 class="redTitle">猜你喜欢</h4>
         <ul class="likeProductList">
-          <li>
+          <li v-for="i in Guess">
             <router-link to="/purchase">
-              <img src="./img/100000027_M.jpg" alt="甜蜜如心鲜奶蛋糕"/>
+              <img :src="i.img" :alt="i.alt"/>
             </router-link>
-            <em>¥258.00</em>
-            <strong> 甜蜜如心鲜奶蛋糕</strong>
-          </li>
-          <li>
-            <router-link to="/purchase">
-              <img src="./img/100000027_M.jpg" alt="甜蜜如心鲜奶蛋糕"/>
-            </router-link>
-            <em>¥258.00</em>
-            <strong> 甜蜜如心鲜奶蛋糕</strong>
+            <em>¥{{i.Price}}</em>
+            <strong>{{i.name}}</strong>
           </li>
         </ul>
       </div>
@@ -146,6 +97,10 @@ import TopNavigation from '../public/TopNavigation.vue'
 import search from '../public/search.vue'
 import ClassNav from '../public/ClassNav.vue'
 import BottomNav from '../public/BottomNavigation.vue'
+// 商品
+import img_1 from './img/100000027_M.jpg'
+// 猜你喜欢
+import img1 from './img/100001442_M.jpg'
 export default {
   components: {
     TopNavigation,
@@ -157,7 +112,15 @@ export default {
     return {
       imglist: [banner1, banner2, banner3],
       activeIndex: '1',
-      currentPage1: 1
+      currentPage1: 1,
+      commodity: [
+        {id:"1",title:"芝兰玉叶慕思蛋糕",img:img_1,describe:"干酪慕思，布朗尼饼干底",alt:"芝兰玉叶慕思蛋糕",spe:"78号、56号",Price:"145.00"}
+      ],
+      Guess: [
+        {id:"1",img:img1,alt:"甜蜜如心鲜奶蛋糕",Price:'258.00',name:"甜蜜如心鲜奶蛋糕"},
+        {id:"2",img:img1,alt:"甜蜜如心鲜奶蛋糕",Price:'258.00',name:"甜蜜如心鲜奶蛋糕"},
+        {id:"3",img:img1,alt:"甜蜜如心鲜奶蛋糕",Price:'258.00',name:"甜蜜如心鲜奶蛋糕"}
+      ]
     }
   },
   methods: {

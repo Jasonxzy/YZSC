@@ -114,7 +114,7 @@ export default new Router({
       components: {
         default: purchase
       }
-    }, 
+    },
     {
       path: '/ShoppingCart',
       components: {
@@ -198,17 +198,9 @@ export default new Router({
       }
     },
     {
-      path: '/MyInformation',
-      components: {
-        default: MyInformation
-        // default: Agreement
-      }
-    },
-    {
       path: '/City',
       components: {
         default: City
-        // default: MyInformation
       }
     },
     {

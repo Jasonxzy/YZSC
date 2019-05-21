@@ -23,59 +23,43 @@
             <li class="hui_bg">
               <strong>
                 <span class="icon1 wizard0" style="background-position: 0px 0px;"></span>
-                <router-link to="/SearchList">元祖端午季</router-link>
+                <router-link to="/SearchList">元祖端午节</router-link>
               </strong>
-              <router-link to="/SearchList">纸质提货券</router-link>
-              <router-link to="/SearchList">端午礼盒</router-link>
-              <router-link to="/SearchList">电子提货券</router-link>
+              <em v-for="i in CcnList1"><router-link to="/SearchList">{{i.Ccn}}</router-link></em>
               </li>
             <li>
               <strong>
                 <span class="icon1 wizard1" style="background-position: 0px 0px;"></span>
                 <router-link to="/SearchList">元祖梦蛋糕</router-link>
               </strong>
-              <router-link to="/SearchList">母亲节专款</router-link>
-              <router-link to="/SearchList">鲜奶蛋糕</router-link>
-              <router-link to="/SearchList">巧克力蛋糕</router-link>
-              <router-link to="/SearchList">慕思蛋糕</router-link>
-              <router-link to="/SearchList">多层蛋糕</router-link>
+              <em v-for="i in CcnList2"><router-link to="/SearchList">{{i.Ccn}}</router-link></em>
             </li>
             <li class="hui_bg">
               <strong>
                 <span class="icon1 wizard2" style="background-position: 0px 0px;"></span>
                 <router-link to="/SearchList">冰品季</router-link>
               </strong>
-              <router-link to="/SearchList">冰淇淋蛋糕</router-link>
-              <router-link to="/SearchList">冰品点心</router-link>
+              <em v-for="i in CcnList3"><router-link to="/SearchList">{{i.Ccn}}</router-link></em>
             </li>
             <li>
               <strong>
                 <span class="icon1 wizard3" style="background-position: 0px 0px;"></span>
                 <router-link to="/SearchList">元祖礼盒</router-link>
               </strong>
-              <router-link to="/SearchList">水果礼盒</router-link>
-              <router-link to="/SearchList">糕点礼盒</router-link>
+              <em v-for="i in CcnList4"><router-link to="/SearchList">{{i.Ccn}}</router-link></em>
             </li>
             <li class="hui_bg">
               <strong>
                 <span class="icon1 wizard4" style="background-position: 0px 0px;"></span>
-                <router-link to="#">精致西点</router-link>
               </strong>
-              <router-link to="/SearchList">小慕思类</router-link>
-              <router-link to="/SearchList">西点卷类</router-link>
-              <router-link to="/SearchList">麻糬类</router-link>
-              <router-link to="/SearchList">其他</router-link>
+              <em v-for="i in CcnList5"><router-link to="/SearchList">{{i.Ccn}}</router-link></em>
             </li>
             <li>
               <strong>
                 <span class="icon1 wizard5" style="background-position: 0px 0px;"></span>
-                <router-link to="#">元祖卡券</router-link>
+                <router-link to="/SearchList">元祖卡券</router-link>
               </strong>
-              <router-link to="/SearchList">礼卡</router-link>
-              <router-link to="/SearchList">水果券</router-link>
-              <router-link to="/SearchList">西点券</router-link>
-              <router-link to="/SearchList">蛋糕券</router-link>
-              <router-link to="/SearchList">电子券</router-link>
+              <em v-for="i in CcnList6"><router-link to="/SearchList">{{i.Ccn}}</router-link></em>
             </li>
           </ul>
         </div>
@@ -84,7 +68,53 @@
   </nav>
 </template>
 <script>
-export default {}
+export default {
+  data () {
+    return {
+      CommodityList: [
+        {ActivityTitle: "元祖端午季"},
+        {ActivityTitle: "元祖梦蛋糕"},
+        {ActivityTitle: "冰品季"},
+        {ActivityTitle: "元祖礼盒"},
+        {ActivityTitle: "精致西点"},
+        {ActivityTitle: "元祖卡卷"}
+      ],
+      CcnList1:[
+        {Ccn:"纸质提货券"},
+        {Ccn:"端午礼盒"},
+        {Ccn:"电子提货券"}
+      ],
+      CcnList2:[
+        {Ccn:"母亲节专款"},
+        {Ccn:"鲜奶蛋糕"},
+        {Ccn:"巧克力蛋糕"},
+        {Ccn:"慕思蛋糕"},
+        {Ccn:"多层蛋糕"}
+      ],
+      CcnList3:[
+        {Ccn:"冰淇淋蛋糕"},
+        {Ccn:"冰品点心"}
+      ],
+      CcnList4:[
+        {Ccn:"水果礼盒"},
+        {Ccn:"糕点礼盒"}
+      ],
+      CcnList5:[
+        {Ccn:"小慕思类"},
+        {Ccn:"西点卷类"},
+        {Ccn:"麻糬类"},
+        {Ccn:"其他"}
+      ],
+      CcnList6:[
+        {Ccn:"礼卡"},
+        {Ccn:"水果券"},
+        {Ccn:"西点券"},
+        {Ccn:"蛋糕券"},
+        {Ccn:"电子券"}
+      ]
+    }
+  }
+}
 </script>
 <style>
   .menu{
