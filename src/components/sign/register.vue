@@ -1,4 +1,4 @@
-<template>
+<template xmlns="http://www.w3.org/1999/html">
 
     <div class="register">
         <el-form :model="ruleForm" :rules="rules" ref="ruleForm" class="demo-ruleForm" label-width="100px">
@@ -26,7 +26,7 @@
         </el-form-item>
         <div class="automatic cleafx">
             <input type="checkbox">同意注册协议
-            <a class="fr">注册协议</a>
+            <a>注册协议</a>
         </div>
         <el-form-item>
             <el-button type="primary" @click="submitForm('ruleForm')">提交</el-button>

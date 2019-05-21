@@ -205,9 +205,9 @@ export default {
         {img:iagms2},
         {img:iagms3}
       ],
-      min_img: img1,
-      minImg: img6,
-      num8:1,
+      min_img: iagms1,
+      minImg: iagms1,
+      num8: 1,
       dialogVisible: false,
       activeName: 'first',
       value1: null,
@@ -251,44 +251,42 @@ export default {
       disn.style.display = "none"
     },
   },
-    methods: {
-      handleClick (tab, event) {
-        console.log(tab, event)
-//        console.log(tab, event)
-      },
-      son (item, idx) {
-        this.index = idx;
-      },
-      handleChange (value) {
-//        console.log(value);
-      },
-      sas: function () {
-        let fontw = document.querySelector("#fontw")
-        let rr = document.querySelector("#rr")
-        let aa = document.querySelector("#aa")
-        let disn = document.querySelector("#disn")
-        fontw.style.display = "block"
-        aa.style.display = "none"
-        rr.style.display = "block"
-        disn.style.display = "none"
-      },
-      ee: function () {
-        let fontw = document.querySelector("#fontw")
-        let rr = document.querySelector("#rr")
-        let aa = document.querySelector("#aa")
-        let disn = document.querySelector("#disn")
-        disn.style.display = "block"
-        fontw.style.display = "none"
-        rr.style.display = "none"
-        aa.style.display = "block"
-      },
-      lev:function (i,index) {
-        this.curren = index
-        this.min_img = i.img
-      },
-      changeBorder1:function (index) {
-        this.current2 = index
-        console.log(this.current2)
+  methods: {
+    handleClick (tab, event) {
+      console.log(tab, event)
+    },
+    son (item, idx) {
+      this.index = idx;
+    },
+    handleChange (value) {
+    },
+    sas: function () {
+      let fontw = document.querySelector("#fontw")
+      let rr = document.querySelector("#rr")
+      let aa = document.querySelector("#aa")
+      let disn = document.querySelector("#disn")
+      fontw.style.display = "block"
+      aa.style.display = "none"
+      rr.style.display = "block"
+      disn.style.display = "none"
+    },
+    ee: function () {
+      let fontw = document.querySelector("#fontw")
+      let rr = document.querySelector("#rr")
+      let aa = document.querySelector("#aa")
+      let disn = document.querySelector("#disn")
+      disn.style.display = "block"
+      fontw.style.display = "none"
+      rr.style.display = "none"
+      aa.style.display = "block"
+    },
+    lev:function (i,index) {
+      this.curren = index
+      this.min_img = i.img
+    },
+    changeBorder1:function (index) {
+      this.current2 = index
+      console.log(this.current2)
     }
   }
 }

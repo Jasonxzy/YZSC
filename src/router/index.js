@@ -112,7 +112,7 @@ export default new Router({
       components: {
         default: purchase
       }
-    }, 
+    },
     {
       path: '/ShoppingCart',
       components: {
@@ -198,15 +198,13 @@ export default new Router({
     {
       path: '/MyInformation', // 我的资料
       components: {
-        default: MyInformation,
-        default: Agreement
+        default: MyInformation
       }
     },
     {
       path: '/cl',
       components: {
-        default: City,
-        default: MyInformation
+        default: City
       }
     },
     {

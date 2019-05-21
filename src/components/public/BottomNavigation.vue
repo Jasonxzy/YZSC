@@ -41,10 +41,10 @@
           </router-link>
         </li>
         <li id="btn_sc">
-          <a href="#">
+          <router-link to="/Member/Orderlist">
             <span></span>
             <em>我的收藏</em>
-          </a>
+          </router-link>
         </li>
       </ul>
     </div>
