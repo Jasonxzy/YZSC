@@ -24,8 +24,8 @@
           <em>元祖公告</em>
         </div>
         <ul class="NewsList">
-          <li>
-            <router-link to="/Notice" title="【公告】18年中秋月饼销毁">【公告】18年中秋月饼销毁</router-link>
+          <li v-for="i in NoticeList">
+            <router-link to="/Notice" :title="i.title">{{i.name}}</router-link>
           </li>
         </ul>
       </div>
@@ -37,40 +37,12 @@
         <el-tab-pane label="元祖新品" name="first">
           <div class="Tab_nr">
             <ul class="ProductList3">
-              <li>
+              <li v-for="i in prodlist">
                 <router-link to="/purchase" class="photo">
-                  <img title="8号溪云初起巧克力蛋糕" alt="8号溪云初起巧克力蛋糕" src="./img/100001422_M.jpg"/>
+                  <img :title="i.title" :alt="i.title" :src="i.img"/>
                 </router-link>
-                <strong>溪云初起巧克力蛋糕</strong>
-                <em> ¥258.00</em>
-              </li>
-              <li>
-                <router-link to="/purchase" class="photo">
-                  <img title="8号溪云初起巧克力蛋糕" alt="8号溪云初起巧克力蛋糕" src="./img/100001422_M.jpg"/>
-                </router-link>
-                <strong>溪云初起巧克力蛋糕</strong>
-                <em> ¥258.00</em>
-              </li>
-              <li>
-                <router-link to="/purchase" class="photo">
-                  <img title="8号溪云初起巧克力蛋糕" alt="8号溪云初起巧克力蛋糕" src="./img/100001422_M.jpg"/>
-                </router-link>
-                <strong>溪云初起巧克力蛋糕</strong>
-                <em> ¥258.00</em>
-              </li>
-              <li>
-                <router-link to="/purchase" class="photo">
-                  <img title="8号溪云初起巧克力蛋糕" alt="8号溪云初起巧克力蛋糕" src="./img/100001422_M.jpg"/>
-                </router-link>
-                <strong>溪云初起巧克力蛋糕</strong>
-                <em> ¥258.00</em>
-              </li>
-              <li>
-                <router-link to="/purchase" class="photo">
-                  <img title="8号溪云初起巧克力蛋糕" alt="8号溪云初起巧克力蛋糕" src="./img/100001422_M.jpg"/>
-                </router-link>
-                <strong>溪云初起巧克力蛋糕</strong>
-                <em> ¥258.00</em>
+                <strong>{{i.name}}</strong>
+                <em> ¥{{i.monery}}</em>
               </li>
             </ul>
             <span class="clear"></span>
@@ -79,40 +51,12 @@
         <el-tab-pane label="热销商品" name="second">
           <div class="Tab_nr">
             <ul class="ProductList3">
-              <li>
+              <li v-for="i in Selllist">
                 <router-link to="/purchase" class="photo">
-                  <img title="8号溪云初起巧克力蛋糕" alt="8号溪云初起巧克力蛋糕" src="./img/100001082_M.jpg"/>
+                  <img :title="i.title" :alt="i.title" :src="i.img"/>
                 </router-link>
-                <strong>溪云初起巧克力蛋糕</strong>
-                <em> ¥258.00</em>
-              </li>
-              <li>
-                <router-link to="/purchase" class="photo">
-                  <img title="8号溪云初起巧克力蛋糕" alt="8号溪云初起巧克力蛋糕" src="./img/100001082_M.jpg"/>
-                </router-link>
-                <strong>溪云初起巧克力蛋糕</strong>
-                <em> ¥258.00</em>
-              </li>
-              <li>
-                <router-link to="/purchase" class="photo">
-                  <img title="8号溪云初起巧克力蛋糕" alt="8号溪云初起巧克力蛋糕" src="./img/100001082_M.jpg"/>
-                </router-link>
-                <strong>溪云初起巧克力蛋糕</strong>
-                <em> ¥258.00</em>
-              </li>
-              <li>
-                <router-link to="/purchase" class="photo">
-                  <img title="8号溪云初起巧克力蛋糕" alt="8号溪云初起巧克力蛋糕" src="./img/100001082_M.jpg"/>
-                </router-link>
-                <strong>溪云初起巧克力蛋糕</strong>
-                <em> ¥258.00</em>
-              </li>
-              <li>
-                <router-link to="/purchase" class="photo">
-                  <img title="8号溪云初起巧克力蛋糕" alt="8号溪云初起巧克力蛋糕" src="./img/100001082_M.jpg"/>
-                </router-link>
-                <strong>溪云初起巧克力蛋糕</strong>
-                <em> ¥258.00</em>
+                <strong>{{i.name}}</strong>
+                <em> ¥{{i.monery}}</em>
               </li>
             </ul>
             <span class="clear"></span>
@@ -121,40 +65,12 @@
         <el-tab-pane label="节庆民俗" name="third">
           <div class="Tab_nr">
             <ul class="ProductList3">
-              <li>
+              <li v-for="i in folklist">
                 <router-link to="/purchase" class="photo">
-                  <img title="8号溪云初起巧克力蛋糕" alt="8号溪云初起巧克力蛋糕" src="./img/100001174_M.jpg"/>
+                  <img :title="i.title" :alt="i.title" :src="i.img"/>
                 </router-link>
-                <strong>溪云初起巧克力蛋糕</strong>
-                <em> ¥258.00</em>
-              </li>
-              <li>
-                <router-link to="/purchase" class="photo">
-                  <img title="8号溪云初起巧克力蛋糕" alt="8号溪云初起巧克力蛋糕" src="./img/100001174_M.jpg"/>
-                </router-link>
-                <strong>溪云初起巧克力蛋糕</strong>
-                <em> ¥258.00</em>
-              </li>
-              <li>
-                <router-link to="/purchase" class="photo">
-                  <img title="8号溪云初起巧克力蛋糕" alt="8号溪云初起巧克力蛋糕" src="./img/100001174_M.jpg"/>
-                </router-link>
-                <strong>溪云初起巧克力蛋糕</strong>
-                <em> ¥258.00</em>
-              </li>
-              <li>
-                <router-link to="/purchase" class="photo">
-                  <img title="8号溪云初起巧克力蛋糕" alt="8号溪云初起巧克力蛋糕" src="./img/100001174_M.jpg"/>
-                </router-link>
-                <strong>溪云初起巧克力蛋糕</strong>
-                <em> ¥258.00</em>
-              </li>
-              <li>
-                <router-link to="/purchase" class="photo">
-                  <img title="8号溪云初起巧克力蛋糕" alt="8号溪云初起巧克力蛋糕" src="./img/100001174_M.jpg"/>
-                </router-link>
-                <strong>溪云初起巧克力蛋糕</strong>
-                <em> ¥258.00</em>
+                <strong>{{i.name}}</strong>
+                <em> ¥{{i.monery}}</em>
               </li>
             </ul>
             <span class="clear"></span>
@@ -163,40 +79,12 @@
         <el-tab-pane label="元祖卡券" name="fourth">
           <div class="Tab_nr">
             <ul class="ProductList3">
-              <li>
+              <li v-for="i in Cardlist">
                 <router-link to="/purchase" class="photo">
-                  <img title="8号溪云初起巧克力蛋糕" alt="8号溪云初起巧克力蛋糕" src="./img/600000224_M.jpg"/>
+                  <img :title="i.title" :alt="i.title" :src="i.img"/>
                 </router-link>
-                <strong>溪云初起巧克力蛋糕</strong>
-                <em> ¥258.00</em>
-              </li>
-              <li>
-                <router-link to="/purchase" class="photo">
-                  <img title="8号溪云初起巧克力蛋糕" alt="8号溪云初起巧克力蛋糕" src="./img/600000224_M.jpg"/>
-                </router-link>
-                <strong>溪云初起巧克力蛋糕</strong>
-                <em> ¥258.00</em>
-              </li>
-              <li>
-                <router-link to="/purchase" class="photo">
-                  <img title="8号溪云初起巧克力蛋糕" alt="8号溪云初起巧克力蛋糕" src="./img/600000224_M.jpg"/>
-                </router-link>
-                <strong>溪云初起巧克力蛋糕</strong>
-                <em> ¥258.00</em>
-              </li>
-              <li>
-                <router-link to="/purchase" class="photo">
-                  <img title="8号溪云初起巧克力蛋糕" alt="8号溪云初起巧克力蛋糕" src="./img/600000224_M.jpg"/>
-                </router-link>
-                <strong>溪云初起巧克力蛋糕</strong>
-                <em> ¥258.00</em>
-              </li>
-              <li>
-                <router-link to="/purchase" class="photo">
-                  <img title="8号溪云初起巧克力蛋糕" alt="8号溪云初起巧克力蛋糕" src="./img/600000224_M.jpg"/>
-                </router-link>
-                <strong>溪云初起巧克力蛋糕</strong>
-                <em> ¥258.00</em>
+                <strong>{{i.name}}</strong>
+                <em> ¥{{i.monery}}</em>
               </li>
             </ul>
             <span class="clear"></span>
@@ -221,28 +109,12 @@
         </div>
       </div>
       <ul class="ProductList">
-        <li>
+        <li v-for="i in Cakelist">
           <router-link to="/purchase" class="photo">
-            <img title="6号朝羽鲜奶蛋糕" alt="6号朝羽鲜奶蛋糕" src="./img/100001428_M.jpg"/>
-            <strong>朝羽鲜奶蛋糕 </strong>
-            <span> 寓意良辰美景， 幸福的时刻</span>
-            <em>¥198.00 </em>
-          </router-link>
-        </li>
-        <li>
-          <router-link to="/purchase" class="photo">
-            <img title="6号纤云弄巧鲜奶蛋糕（迷情蓝莓风）" alt="6号纤云弄巧鲜奶蛋糕（迷情蓝莓风）" src="./img/100000805_M.jpg"/>
-            <strong>纤云弄巧鲜奶蛋糕（迷情蓝莓风）  </strong>
-            <span>  带给你浓郁的蓝莓风味</span>
-            <em>¥198.00 </em>
-          </router-link>
-        </li>
-        <li>
-          <router-link to="/purchase" class="photo">
-            <img title="以花为名鲜奶蛋糕" alt="以花为名鲜奶蛋糕" src="./img/100000962_M.jpg"/>
-            <strong>以花为名鲜奶蛋糕 </strong>
-            <span> 让“世界上第一个挺你的妈妈”，成为幸福的妈妈</span>
-            <em>¥258.00 </em>
+            <img :title="i.title" :alt="i.title" :src="i.img"/>
+            <strong>{{i.name}}</strong>
+            <span>{{i.describe}}</span>
+            <em>{{i.monery}}</em>
           </router-link>
         </li>
       </ul>
@@ -264,28 +136,12 @@
         </div>
       </div>
       <ul class="ProductList">
-        <li>
+        <li v-for="i in GiftBoxlist">
           <router-link to="/purchase" class="photo">
-            <img title="藤椒牛肉粽竹篮版" alt="藤椒牛肉粽竹篮版" src="./img/100001362_M.jpg"/>
-            <strong>藤椒牛肉粽</strong>
-            <span> 麻辣爽口，料多馅足，优选牛柳</span>
-            <em>¥268.00</em>
-          </router-link>
-        </li>
-        <li>
-          <router-link to="/purchase" class="photo">
-            <img title="6号纤云弄巧鲜奶蛋糕（迷情蓝莓风）" alt="6号纤云弄巧鲜奶蛋糕（迷情蓝莓风）" src="./img/100000805_M.jpg"/>
-            <strong>纤云弄巧鲜奶蛋糕（迷情蓝莓风）  </strong>
-            <span>  带给你浓郁的蓝莓风味</span>
-            <em>¥198.00 </em>
-          </router-link>
-        </li>
-        <li>
-          <router-link to="/purchase" class="photo">
-            <img title="以花为名鲜奶蛋糕" alt="以花为名鲜奶蛋糕" src="./img/100000962_M.jpg"/>
-            <strong>以花为名鲜奶蛋糕 </strong>
-            <span> 让“世界上第一个挺你的妈妈”，成为幸福的妈妈</span>
-            <em>¥258.00 </em>
+            <img :title="i.title" :alt="i.title" :src="i.img"/>
+            <strong>{{i.name}}</strong>
+            <span>{{i.describe}}</span>
+            <em>{{i.monery}}</em>
           </router-link>
         </li>
       </ul>
@@ -307,28 +163,12 @@
         </div>
       </div>
       <ul class="ProductList">
-        <li>
+        <li v-for="i in westPointlist">
           <router-link to="/purchase" class="photo">
-            <img title="小西点虎皮卷" alt="小西点虎皮卷" src="./img/100000235_M.jpg"/>
-            <strong>西点卷</strong>
-            <span>  卷起来的幸福</span>
-            <em>¥10.00</em>
-          </router-link>
-        </li>
-        <li>
-          <router-link to="/purchase" class="photo">
-            <img title="6号纤云弄巧鲜奶蛋糕（迷情蓝莓风）" alt="6号纤云弄巧鲜奶蛋糕（迷情蓝莓风）" src="./img/100000805_M.jpg"/>
-            <strong>纤云弄巧鲜奶蛋糕（迷情蓝莓风）  </strong>
-            <span>  带给你浓郁的蓝莓风味</span>
-            <em>¥198.00 </em>
-          </router-link>
-        </li>
-        <li>
-          <router-link to="/purchase" class="photo">
-            <img title="以花为名鲜奶蛋糕" alt="以花为名鲜奶蛋糕" src="./img/100000962_M.jpg"/>
-            <strong>以花为名鲜奶蛋糕 </strong>
-            <span> 让“世界上第一个挺你的妈妈”，成为幸福的妈妈</span>
-            <em>¥258.00 </em>
+            <img :title="i.title" :alt="i.title" :src="i.img"/>
+            <strong>{{i.name}}</strong>
+            <span>{{i.describe}}</span>
+            <em>{{i.monery}}</em>
           </router-link>
         </li>
       </ul>
@@ -339,24 +179,10 @@
       <h3 class="PartTitle">精选活动 </h3>
       <span class="clear"></span>
       <ul class="imgList">
-        <li>
+        <li v-for="i in ActivitiesList">
           <div class="simple_disp-img">
             <router-link to="/purchase">
-              <img src="./img/49731.jpg"/>
-            </router-link>
-          </div>
-        </li>
-        <li>
-          <div class="simple_disp-img">
-            <router-link to="/purchase">
-              <img src="./img/49732.jpg"/>
-            </router-link>
-          </div>
-        </li>
-        <li>
-          <div class="simple_disp-img">
-            <router-link to="/purchase">
-              <img src="./img/49733.jpg"/>
+              <img :src="i.img"/>
             </router-link>
           </div>
         </li>
@@ -375,6 +201,20 @@ import TopBanner from '../public/TopBanner.vue'
 import search from '../public/search.vue'
 import ClassNav from '../public/ClassNav.vue'
 import BottomNav from '../public/BottomNavigation.vue'
+import img1 from './img/100001422_M.jpg'
+import img2 from './img/100000234_M.jpg'
+import img3 from './img/100001174_M.jpg'
+import img4 from './img/600000224_M.jpg'
+//   蛋糕 图片
+import img5 from './img/100000805_M.jpg'
+//  礼盒 图片
+import img6 from './img/100001362_M.jpg'
+//  西点 图片
+import img7 from './img/100000235_M.jpg'
+//  精选活动 图片
+import img8 from './img/49731.jpg'
+import img9 from './img/49732.jpg'
+import img10 from './img/49733.jpg'
 export default {
   components: {
     TopNavigation,
@@ -386,7 +226,67 @@ export default {
   data () {
     return {
       imglist: [banner1, banner2, banner3],
-      activeName: 'first'
+      activeName: 'first',
+//      banner下面tab切换
+      prodlist: [
+        {name: "溪云初起巧克力蛋糕",title: "8号溪云初起巧克力蛋糕",img: img1, monery: "258.00"},
+        {name: "溪云初起巧克力蛋糕",title: "8号溪云初起巧克力蛋糕",img: img1, monery: "258.00"},
+        {name: "溪云初起巧克力蛋糕",title: "8号溪云初起巧克力蛋糕",img: img1, monery: "258.00"},
+        {name: "溪云初起巧克力蛋糕",title: "8号溪云初起巧克力蛋糕",img: img1, monery: "258.00"},
+        {name: "溪云初起巧克力蛋糕",title: "8号溪云初起巧克力蛋糕",img: img1, monery: "258.00"}
+      ],
+      Selllist: [
+        {name: "溪云初起巧克力蛋糕",title: "6号朝羽鲜奶蛋糕",img: img2, monery: "258.00"},
+        {name: "溪云初起巧克力蛋糕",title: "6号朝羽鲜奶蛋糕",img: img2, monery: "258.00"},
+        {name: "溪云初起巧克力蛋糕",title: "6号朝羽鲜奶蛋糕",img: img2, monery: "258.00"},
+        {name: "溪云初起巧克力蛋糕",title: "6号朝羽鲜奶蛋糕",img: img2, monery: "258.00"},
+        {name: "溪云初起巧克力蛋糕",title: "6号朝羽鲜奶蛋糕",img: img2, monery: "258.00"}
+      ],
+      folklist: [
+        {name: "溪云初起巧克力蛋糕",title: "6号朝羽鲜奶蛋糕",img: img3, monery: "258.00"},
+        {name: "溪云初起巧克力蛋糕",title: "6号朝羽鲜奶蛋糕",img: img3, monery: "258.00"},
+        {name: "溪云初起巧克力蛋糕",title: "6号朝羽鲜奶蛋糕",img: img3, monery: "258.00"},
+        {name: "溪云初起巧克力蛋糕",title: "6号朝羽鲜奶蛋糕",img: img3, monery: "258.00"},
+        {name: "溪云初起巧克力蛋糕",title: "6号朝羽鲜奶蛋糕",img: img3, monery: "258.00"}
+      ],
+      Cardlist: [
+        {name: "溪云初起巧克力蛋糕",title: "6号朝羽鲜奶蛋糕",img: img4, monery: "258.00"},
+        {name: "溪云初起巧克力蛋糕",title: "6号朝羽鲜奶蛋糕",img: img4, monery: "258.00"},
+        {name: "溪云初起巧克力蛋糕",title: "6号朝羽鲜奶蛋糕",img: img4, monery: "258.00"},
+        {name: "溪云初起巧克力蛋糕",title: "6号朝羽鲜奶蛋糕",img: img4, monery: "258.00"},
+        {name: "溪云初起巧克力蛋糕",title: "6号朝羽鲜奶蛋糕",img: img4, monery: "258.00"}
+      ],
+      //      MUCH蛋糕
+      Cakelist: [
+        {name: "朝羽鲜奶蛋糕",title: "6号朝羽鲜奶蛋糕",describe: "寓意良辰美景， 幸福的时刻", img: img5, monery: "258.00"},
+        {name: "朝羽鲜奶蛋糕",title: "6号朝羽鲜奶蛋糕",describe: "寓意良辰美景， 幸福的时刻", img: img5, monery: "258.00"},
+        {name: "朝羽鲜奶蛋糕",title: "6号朝羽鲜奶蛋糕",describe: "寓意良辰美景， 幸福的时刻", img: img5, monery: "258.00"}
+      ],
+      //      元祖礼盒
+      GiftBoxlist: [
+        {name: "藤椒牛肉粽",title: "藤椒牛肉粽竹篮版",describe: "麻辣爽口，料多馅足，优选牛柳", img: img6, monery: "258.00"},
+        {name: "藤椒牛肉粽",title: "藤椒牛肉粽竹篮版",describe: "麻辣爽口，料多馅足，优选牛柳", img: img6, monery: "258.00"},
+        {name: "藤椒牛肉粽",title: "藤椒牛肉粽竹篮版",describe: "麻辣爽口，料多馅足，优选牛柳", img: img6, monery: "258.00"}
+      ],
+      //      元祖礼盒
+      westPointlist: [
+        {name: "西点卷",title: "小西点虎皮卷",describe: "卷起来的幸福", img: img7, monery: "258.00"},
+        {name: "西点卷",title: "小西点虎皮卷",describe: "卷起来的幸福", img: img7, monery: "258.00"},
+        {name: "西点卷",title: "小西点虎皮卷",describe: "卷起来的幸福", img: img7, monery: "258.00"}
+      ],
+      //    精选活动
+      ActivitiesList: [
+        {img: img8},
+        {img: img9},
+        {img: img10}
+      ],
+      //    公告
+      NoticeList: [
+        {name: "【公告】18年中秋月饼销毁",title: "【公告】18年中秋月饼销毁"},
+        {name: "【公告】18年中秋月饼销毁",title: "【公告】18年中秋月饼销毁"},
+        {name: "【公告】18年中秋月饼销毁",title: "【公告】18年中秋月饼销毁"},
+        {name: "【公告】18年中秋月饼销毁",title: "【公告】18年中秋月饼销毁"}
+      ]
     }
   },
   methods: {
