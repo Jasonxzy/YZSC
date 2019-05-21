@@ -70,17 +70,17 @@
             </div>
             <div class="shop-number margin-B-25">
               <div class="fonts-14 float-l shu lightgray">数量:</div>
-          <ul><li>
-            <el-input-number v-model="num8" controls-position="right" @change="handleChange"></el-input-number>
-          </li></ul>
-          <button class="buy fonts-20 float-l buypinkred"><router-link to="./ShoppingCart">立即购买</router-link></button>
+              <ul><li>
+                <el-input-number v-model="num8" controls-position="right" @change="handleChange"></el-input-number>
+              </li></ul>
+              <button class="buy fonts-20 float-l buypinkred"><router-link to="./ShoppingCart">立即购买</router-link></button>
               <button class="join fonts-20 float-l white joinred">
                 <el-popover ref="popover2" placement="top-start" title="成功加入购物车" width="145" trigger="click"
                   content="">
                 </el-popover>
                 <el-button v-popover:popover2>加入购物车</el-button>
               </button>
-        </div>
+             </div>
             <div class="shop-service fonts-12 margin-B-20">
               服务承诺：
               <img src="http://mall.ganso.com.cn/_ui/hepimages/00.gif"/>
@@ -196,7 +196,8 @@ export default {
     ClassNav,
     BottomNav
   },
-  name: "guessLike",
+//  name: "guessLike",
+  name: "DetaiBanner",
   data () {
     return {
       //   handleMove: true,
@@ -205,8 +206,8 @@ export default {
         {img:iagms2},
         {img:iagms3}
       ],
-      min_img: img1,
-      minImg: img6,
+      min_img: iagms1,
+//      minImg: img6,
       num8:1,
       dialogVisible: false,
       activeName: 'first',
@@ -229,27 +230,6 @@ export default {
         {name: "款式3"},
       ]
     }
-  },
-  methods: {
-    handleClick (tab, event) {
-      //        console.log(tab, event)
-    },
-    son (item, idx) {
-      this.index = idx;
-    },
-    handleChange (value) {
-      //        console.log(value);
-    },
-    sas: function () {
-      let fontw = document.querySelector("#fontw")
-      let rr = document.querySelector("#rr")
-      let aa = document.querySelector("#aa")
-      let disn = document.querySelector("#disn")
-      fontw.style.display = "block"
-      aa.style.display = "none"
-      rr.style.display = "block"
-      disn.style.display = "none"
-    },
   },
     methods: {
       handleClick (tab, event) {
@@ -432,6 +412,9 @@ export default {
                 padding-left: 8px;
                 padding-right: 35px;
               }
+              &:hover /deep/.el-input__inner{
+                border:1px solid red;
+              }
             }
             .buy {
               margin: 0 14px 0 0;
@@ -476,10 +459,10 @@ export default {
                 background-color: #FE1B6A;
               }
             }
-
             .shu {
               letter-spacing: 5px;
             }
+
           }
           .shop-service {
             padding: 0 12px;
@@ -532,6 +515,15 @@ export default {
           text-align: center;
           padding: inherit;
           height: 30px;
+          line-height: 30px;
+        }
+        /deep/.el-tabs__nav-wrap {
+          height: 30px;
+        }
+        /deep/.el-tabs__nav {
+          height: 30px;
+        }
+        /deep/#tab-first{
           line-height: 30px;
         }
         .ProductShow {
@@ -644,7 +636,7 @@ export default {
           }
         }
       }
-/deep/.vue-magnify .zoom-box[data-v-0443e94f]{
+      /deep/.vue-magnify .zoom-box[data-v-0443e94f]{
         z-index:9999;
       }
     }
