@@ -133,6 +133,7 @@ import ClassNav from '../public/ClassNav.vue'
   line-height: 50px;
   font-size: 16px;
   width: 599px;
+  padding-left: 360px;
 }
 .password{
   width: 700px;
@@ -175,7 +176,7 @@ import ClassNav from '../public/ClassNav.vue'
 }
  .nav-top-span{
     display: inline-block;
-    margin-bottom: 14px;
+    margin-bottom: 20px;
 } 
 </style>
 

@@ -35,7 +35,6 @@
           </div>
           <div class="Member-content fr">
             <router-view></router-view>
-            <!-- <router-view></router-view> -->
           </div>
           <span class="clear"></span>
       </div>

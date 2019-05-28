@@ -9,7 +9,7 @@
                 </el-form-item>
                 <div class="automatic cleafx">
                     <input type="checkbox">自动登录
-                    <router-link to="/"><a class="fr">忘记密码?</a></router-link>
+                    <router-link to="/Forgetpassword"><a class="fr">忘记密码?</a></router-link>
                 </div>
                 <el-form-item>
                   <el-button type="primary" @click="submitForm('ruleForm')">登录</el-button>
